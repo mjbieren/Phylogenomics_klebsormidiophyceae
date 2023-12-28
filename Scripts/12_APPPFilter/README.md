@@ -9,7 +9,7 @@ To run it, edit the [APPPF.sh](/Scripts/12_APPPFilter/APPPF.sh) file and edit li
 This tool can run with just 1 cpu and output files can not be bigger than 1gb of RAM. It can run on any 64-bit machine on the front end and is super fast. 5% of the time is the calculations. 95% of the time, it parses the input file (loading to memory) and writes the output files. Which is heavily depending on the speed of your disks and/or your network speed.
 
 ## APPPFormat (Apply Phylopypruner Format)
-This tool is created with the boost library (v1.78). And is developed in Visual Studio 2019 with the GCC compiler (For remote Linux).  I've compiled 3 different executables (they are portable!) under Debian 10 but also work and tested on Debian 11 ([APPPFormat_Debian.out](/Executables/APPPFormat/)), Scientific Linux 7, which is based on Red Hat ([APPPFormat_HPC.out](/Executables/APPPFormat/)), and Arch Linux, which is still in beta ([APPPFormat_Arch.out](/Executables/APPPFormat/)).
+This tool is created with the boost library (v1.78). And is developed in Visual Studio 2019 with the GCC compiler (For remote Linux).  I've compiled 3 different executables (they are portable!) under Debian 10 but also work and tested on Debian 11 [APPPFormat_Debian.out](/Executables/APPPFormat/), Scientific Linux 7, which is based on Red Hat [APPPFormat_HPC.out](/Executables/APPPFormat/), and Arch Linux, which is still in beta [APPPFormat_Arch.out](/Executables/APPPFormat/).
 
 Either make your own executable with the corresponding source files or use one of the already existing executables.
 
