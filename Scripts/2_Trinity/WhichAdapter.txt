@@ -1,0 +1,5 @@
+# Which Adapters to use:
+
+TruSeq2 (as used in GAII machines) 
+TruSeq3 (as used by HiSeq and MiSeq machines)
+Novogene when you know Novogene is used
