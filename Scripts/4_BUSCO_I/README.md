@@ -1,4 +1,4 @@
-#BUSCO I
+# BUSCO I
 The 4th step is running BUSCO to determine how complete the alignments are (which is a good indication if we can use the dataset or not)
 
 In my case BUSCO was a module already installed on our High Performance Cluster system. But you can also run it through a conda environment.
