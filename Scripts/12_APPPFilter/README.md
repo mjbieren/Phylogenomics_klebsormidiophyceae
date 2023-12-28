@@ -14,9 +14,11 @@ This tool is created with the boost library (v1.78). And is developed in Visual 
 Either make your own executable with the corresponding source files or use one of the already existing executables.
 
 ### Command line options
+Program format:
 ```
 APPPFormat.out -i [PathToTrees] -t [FileExtensionOfTrees] -r [OutputFolderPath] -g [TaxonomicGroupFilePath] -m [MafftFilesPath:NOT REQUIRED]
 ```
+Options:
 ```
 -i <PathToTrees>		Set the path where the tree files are located. 
 				This is in newick format.[REQUIRED]
