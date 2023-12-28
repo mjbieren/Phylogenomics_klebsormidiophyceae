@@ -8,5 +8,7 @@ Scientific Linux 7 (Red Hat Based)
 Arch (Beta)
 ```
 
-If you have difficulties compiling the software yourself, please feel free to contact me under maaikejacobine.bierenbroodspot@uni-goettingen.de 
-and I will create a compiled version for your UNIX system of choice
+If you have difficulties compiling the software yourself, please feel free to contact me at: <br/>
+maaikejacobine.bierenbroodspot@uni-goettingen.de 
+<br/>
+And I will create a compiled version for your UNIX system of choice
