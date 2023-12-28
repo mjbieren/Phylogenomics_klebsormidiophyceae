@@ -12,7 +12,7 @@ module load fastqc
 
 CURRENTDIR=`pwd`
 DIR=${CURRENTDIR}/Raw_Sample_Data/ #Change this
-OUT=${CURRENTDIR}/FASTQC_Result/ $Changet his
+OUT=${CURRENTDIR}/FASTQC_Result/ #Change this
 
 
 mkdir -p "$OUT" || exit -1
