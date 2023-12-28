@@ -1,0 +1,8 @@
+-i <input Decontamination file liste>\t\t Set your decontamination list file
+-f <Input Fasta file> \t\t Set Fasta Query File
+-b <BlastOutputFiles>\t\tThe Blast Output file, the output file from your decontamination
+-c <ColumnNumber>\t\tThe blast column on which the values should be filterd, e.g. max score, alignment size etc
+-s <StrainName>\t\tStrain Name needed for your output file.
+-r <OutputPath>\t\tOutput folder of the result.
+
+/home/maaike/Programs/GetPositiveDataSetNew/GPDS_Debian.out

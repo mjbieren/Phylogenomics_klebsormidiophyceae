@@ -1,0 +1,9 @@
+"-f <FastaFilesPath>		Set the Path to the directory containing your fasta files: REQUIRED %s"
+"-g <OrthoGroupFilesPath>	Set the Path to the directory containing the Orthogroups in TSV format: REQUIRED%s"
+"-r <OutputFolderPath>		Set the Output Folder Path: REQUIRED %s"
+"-t <TaxonomicGroupFile>	Set the Taxonomic Group File, used to filter your result: NOT REQUIRED. If not Set all Orthogroups are parsed%s"
+"-n <ThresholdNumber>		Set the Threshold number of how many Taxonomic Groups need to be present: NOT REQUIRED. Not setting this value results in parsing all orthogroups!%s"
+"-p							Changes all fasta headers into the format needed for PhyloPyPruner: NOT REQUIRED. Not setting it will result in the same fasta headers as the fasta files uses.%s"
+"-s <SummaryPath>			Set the path to where the user want to write the Summary: NOT REQUIRED. Not setting it will result in no summary file.%s"
+
+OSG.out -f <FastaFilesPath> -g <OrthoGroupFilesPath> -r <OutputFolder> -t <TaxonomicGroupFile> -n <TaxonomicGroupThresholdNumber> -p -s

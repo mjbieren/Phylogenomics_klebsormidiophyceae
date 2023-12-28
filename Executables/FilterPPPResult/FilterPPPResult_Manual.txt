@@ -1,0 +1,9 @@
+FilterPPPResult.out -f [FastaInputFolder] -t [Taxonomic_GroupFile] -r [OutputFolder] -n [ThresholdNumber] -s [SummaryFileFolder]
+
+-f <FastaFilesPath>			Set the Path to the directory containing your fasta files: REQUIRED %s
+-r <OutputFolderPath>		Set the Output Folder Path: REQUIRED
+-t <TaxonomicGroupFile>		Set the Taxonomic Group File, used to filter your result: REQUIRED
+-n <ThresholdNumber>		Set the Threshold number of how many Taxonomic Groups need to be present: REQUIRED.
+-s <SummaryPath>			Set the path to where the user want to write the Summary: NOT REQUIRED. Not setting it will result in no summary file.%s"
+-h							Set if you want only the strain names in the header (based on the @ in the fasta headers)
+-a							Set if you want the gaps removed from the sequences (based on '-' within the sequence files)
