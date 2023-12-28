@@ -8,4 +8,4 @@ However, if you have problems compiling one of the programs, and none of the oth
 Please feel free to contact me at:
 maaikejacobine.bierenbroodspot@uni-goettingen.de
 <br/>
-And I will add your system to the list of executables.
+And I will add your UNIX system to the list of executables.
