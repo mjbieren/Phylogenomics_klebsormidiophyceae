@@ -27,7 +27,7 @@ I used the following combinations:
 "plast_neg" for the Plastid set
 "kleb_pos" for Klebsormidiaceae positive (NIES-2285)
 ```
-This means, for example, that for every fasta header for bacteria, we now have bact_neg-n where n is the number. This is important since the step after the decontamination use these as a reference (you can decide on your own what the names are, but they have to be consistent and preferable without any spaces since a lot of programs can not interpret a space properly).
+This means, for example, that for every fasta header for bacteria, we now have bact_neg-n where n is the number. This is important since the step after the decontamination uses these as a reference (you can decide on your own what the names are, but they have to be consistent and preferable without any spaces since a lot of programs can not interpret a space properly).
 
 Then simply use the commands:
 ```
@@ -42,7 +42,7 @@ Similar to creating a database for decontamination, you have the same commands f
 mmseqs createdb trinity_genes.fasta.transdecoder.pep StrainName_Klebsome_db.db || module purge && exit -1
 mmseqs createindex StrainName_Klebsome_db.db tmp || module purge && exit -1
 ```
-You can also use the script "ConvertToMMseqsDatabase.sh" and run it in the same folder as the TransDecoder output .pep file.
+You can also use the script [ConvertToMMseqsDatabase.sh](Scripts/7_Decontamination/ConvertToMMseqsDatabase.sh) and run it in the same folder as the TransDecoder output .pep file.
 
 
 ## Running the script
