@@ -1,4 +1,4 @@
-#ClipKIT
+# ClipKIT
 We use this step to remove the non-informative sides out of the concatenated alignment.
 
 I run ClipKIT using the same conda environment in step 16 (Prequal). However you can create a separate conda environment with:
