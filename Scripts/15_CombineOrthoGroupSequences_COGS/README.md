@@ -27,7 +27,7 @@ COGS.out -f <SourceFileBase> -s <PathToFirstSet> -t <PathToSecondSet> -o <OrthoF
 
 Program Options:
 ```
--f <FastaFilesBase>			  Set the Path to the directory containing your fasta files: REQUIRED
+-f <FastaFilesBase>			 Set the Path to the directory containing your fasta files: REQUIRED
 -s <FastaFileFirstSet>		Set the Path to the first orthogroup set in fasta file formats: REQUIRED
 -t <FastaFileSecondSet>		Set the Path to the second orthogroup set in fasta file formats: REQUIRED
 -o <OrthoGroupFilesPath>	Set the Path to the directory containing the Orthogroups in TSV format: REQUIRED
