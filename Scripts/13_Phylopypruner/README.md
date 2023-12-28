@@ -10,4 +10,5 @@ I run phylopypruner within a conda environment and a tmux session.
 
 ## Phylopypruner
 PhyloPyPruner is a Python package for phylogenetic tree-based orthology inference, using the species overlap method and is developed by Dr. Felix Thalén.
+
 To install and use Phylopypruner please follow the link https://github.com/fethalen/phylopypruner
