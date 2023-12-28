@@ -46,7 +46,7 @@ You can also use the script [ConvertToMMseqsDatabase.sh](Scripts/7_Decontaminati
 
 
 ## Running the script
-Now simply run the script Decontamination_MMSEQS_Memmode.sh
+Now simply run the script [Decontamination_MMSEQS_Memmode.sh](Scripts/7_Decontamination/Decontamination_MMSEQS_Memmode.sh)
 Don't forget to change input files on line: 8,9,10,11.
 
 The output will be a simple outfmt6 output, identical to a blast output file with outfmt6 format.
