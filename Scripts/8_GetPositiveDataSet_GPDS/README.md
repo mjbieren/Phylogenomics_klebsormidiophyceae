@@ -5,7 +5,7 @@ If you require this to change please contact me at maaikejacobine.bierenbroodspo
 
 This tool basically interprets the *.outfmt6 file and obtains the corresponding matching fasta blocks (1 Fasta block = 1 Header + 1 sequence).
 It will create different fasta files based on the header file.
-An example can be found with Headerfile.GPDS.txt
+An example can be found with [Headerfile.GPDS.txt](Scripts/8_GetPositiveDataSet_GPDS/Headerfile_GPDS.txt)
 
 It will create different Fasta files (objects) based on each line within the Headerfile. And copy the fasta block object pointers into the fasta file object. Which are then used to create the output files (1 Fasta file object = 1 Fasta file)
 
@@ -15,7 +15,7 @@ It just considers the best matching to be the correct one (needed for getting a 
 However, it is a really good indication of how contaminated a file is, and it saved me some headaches when one of the samples was actually contaminated with another non-klebsormidiophyceae sample.
 
 ## GPDS (Get Positive Data Set)
-This tool is created with the boost library (v1.78). And is developed in Visual Studio 2019 with the GCC compiler (For remote Linux).  I've compiled 3 different executables (they are portable!) under Debian 10 but also work and tested on Debian 11 (GPDS_Debian.out), Scientific Linux 7, which is based on Red Hat (GPDS_HPC.out), and Arch Linux which is still in beta (GPDS_Arch.out).
+This tool is created with the boost library (v1.78). And is developed in Visual Studio 2019 with the GCC compiler (For remote Linux).  I've compiled 3 different executables (they are portable!) under Debian 10 but also work and tested on Debian 11 ([GPDS_Debian.out](Executables/GPDS)), Scientific Linux 7, which is based on Red Hat ([GPDS_HPC.out](Executables/GPDS)), and Arch Linux which is still in beta ([GPDS_Arch.out](Executables/GPDS)).
 
 Either make your own executable with the corresponding source files or use one of the already existing executables.
 
@@ -23,6 +23,10 @@ Either make your own executable with the corresponding source files or use one o
 To run GPDS, follow this command guideline
 ```
 GPDS.out -i <HeaderFile> -f <Fasta> -b <Blast> -c <EvalueColumn> -s <StrainName> -r <OutputPath>
+```
+
+Program options:
+```
 
 -i	<HeaderFile>	Basically an overview that the program uses to interpret if a header is a contaminant or not. E.g.
 				HeaderName	+-	Full Name
@@ -42,3 +46,4 @@ The 2nd will be interpreted as a non-contaminant, and the fasta file name will b
 -t				Unset the strict decontamination, ignore the positive set if the result is weaker (default is strict is on, best
 				e-value is the one taken)
 ```
+Alternatively you can edit [GPDS.sh](Scripts/8_GetPositiveDataSet_GPDS/GPDS.sh] and run the script
