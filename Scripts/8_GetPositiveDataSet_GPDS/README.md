@@ -25,10 +25,10 @@ To run GPDS, follow this command guideline
 GPDS.out -i <HeaderFile> -f <Fasta> -b <Blast> -c <EvalueColumn> -s <StrainName> -r <OutputPath>
 
 -i	<HeaderFile>	Basically an overview that the program uses to interpret if a header is a contaminant or not. E.g.
-					HeaderName	+-	Full Name
-					
-					plast_neg	-	Plastid
-					kleb_pos	+	Klebsormidiophyceae
+				HeaderName	+-	Full Name
+				
+				plast_neg	-	Plastid
+				kleb_pos	+	Klebsormidiophyceae
 ```					
 This means that everything with plast_neg is interpreted as a contaminant, and the fasta file name will be StrainName_Plastid.fa . 
 The 2nd will be interpreted as a non-contaminant, and the fasta file name will be StrainName_Klebsormidiophyceae.
