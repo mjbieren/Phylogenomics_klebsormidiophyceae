@@ -1,4 +1,4 @@
-#Phylopypruner
+# Phylopypruner
 This step is neccessary to remove all the paralogs from the orthogroup so that we only have one species per orthogroup.
 
 Throughout the phylogenomic klebsormidiophyceae project we used different settings. Depending if we want more out or in groups.
@@ -8,6 +8,6 @@ Throughout the phylogenomic klebsormidiophyceae project we used different settin
 
 I run phylopypruner within a conda environment and a tmux session.
 
-##Phylopypruner
+## Phylopypruner
 PhyloPyPruner is a Python package for phylogenetic tree-based orthology inference, using the species overlap method and is developed by Dr. Felix Thalén.
 To install and use Phylopypruner please follow the link https://github.com/fethalen/phylopypruner
