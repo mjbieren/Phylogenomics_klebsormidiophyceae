@@ -1,4 +1,5 @@
 # Create Mafft and IQTree Scripts
+
 This step creates mafft and iqtree scripts for each Orthogroup Fasta file with "create_mafft_iqtree_jobs_HPC.sh"
 The scripts then can be run with "RunAllScripts_FromAnyFolder.sh"
 
