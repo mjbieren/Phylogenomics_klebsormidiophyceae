@@ -1,0 +1,407 @@
+IQ-TREE 2.2.2.7 COVID-edition built May 31 2023
+
+Input file name: New1_OldVsNewTax21_PPP3_Concatenated_Alignment_Phyx_g065.fas
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 242979
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 62 sequences with 90321 amino-acid sites
+Number of constant sites: 26089 (= 28.8848% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 26089 (= 28.8848% of all sites)
+Number of parsimony informative sites: 52012
+Number of distinct site patterns: 74383
+
+SUBSTITUTION PROCESS
+--------------------
+
+Mixture model of substitution: MIX{LG+FC60pi1,LG+FC60pi2,LG+FC60pi3,LG+FC60pi4,LG+FC60pi5,LG+FC60pi6,LG+FC60pi7,LG+FC60pi8,LG+FC60pi9,LG+FC60pi10,LG+FC60pi11,LG+FC60pi12,LG+FC60pi13,LG+FC60pi14,LG+FC60pi15,LG+FC60pi16,LG+FC60pi17,LG+FC60pi18,LG+FC60pi19,LG+FC60pi20,LG+FC60pi21,LG+FC60pi22,LG+FC60pi23,LG+FC60pi24,LG+FC60pi25,LG+FC60pi26,LG+FC60pi27,LG+FC60pi28,LG+FC60pi29,LG+FC60pi30,LG+FC60pi31,LG+FC60pi32,LG+FC60pi33,LG+FC60pi34,LG+FC60pi35,LG+FC60pi36,LG+FC60pi37,LG+FC60pi38,LG+FC60pi39,LG+FC60pi40,LG+FC60pi41,LG+FC60pi42,LG+FC60pi43,LG+FC60pi44,LG+FC60pi45,LG+FC60pi46,LG+FC60pi47,LG+FC60pi48,LG+FC60pi49,LG+FC60pi50,LG+FC60pi51,LG+FC60pi52,LG+FC60pi53,LG+FC60pi54,LG+FC60pi55,LG+FC60pi56,LG+FC60pi57,LG+FC60pi58,LG+FC60pi59,LG+FC60pi60}+G4
+
+  No  Component      Rate    Weight   Parameters
+   1  LG+FC60pi1    1.0000   0.0170   LG+FC60pi1
+   2  LG+FC60pi2    1.0000   0.0212   LG+FC60pi2
+   3  LG+FC60pi3    1.0000   0.0277   LG+FC60pi3
+   4  LG+FC60pi4    1.0000   0.0066   LG+FC60pi4
+   5  LG+FC60pi5    1.0000   0.0141   LG+FC60pi5
+   6  LG+FC60pi6    1.0000   0.0069   LG+FC60pi6
+   7  LG+FC60pi7    1.0000   0.0147   LG+FC60pi7
+   8  LG+FC60pi8    1.0000   0.0067   LG+FC60pi8
+   9  LG+FC60pi9    1.0000   0.0018   LG+FC60pi9
+  10  LG+FC60pi10   1.0000   0.0103   LG+FC60pi10
+  11  LG+FC60pi11   1.0000   0.0231   LG+FC60pi11
+  12  LG+FC60pi12   1.0000   0.0058   LG+FC60pi12
+  13  LG+FC60pi13   1.0000   0.0125   LG+FC60pi13
+  14  LG+FC60pi14   1.0000   0.0205   LG+FC60pi14
+  15  LG+FC60pi15   1.0000   0.0071   LG+FC60pi15
+  16  LG+FC60pi16   1.0000   0.0118   LG+FC60pi16
+  17  LG+FC60pi17   1.0000   0.0068   LG+FC60pi17
+  18  LG+FC60pi18   1.0000   0.0434   LG+FC60pi18
+  19  LG+FC60pi19   1.0000   0.0318   LG+FC60pi19
+  20  LG+FC60pi20   1.0000   0.0223   LG+FC60pi20
+  21  LG+FC60pi21   1.0000   0.0102   LG+FC60pi21
+  22  LG+FC60pi22   1.0000   0.0151   LG+FC60pi22
+  23  LG+FC60pi23   1.0000   0.0134   LG+FC60pi23
+  24  LG+FC60pi24   1.0000   0.0149   LG+FC60pi24
+  25  LG+FC60pi25   1.0000   0.0239   LG+FC60pi25
+  26  LG+FC60pi26   1.0000   0.0129   LG+FC60pi26
+  27  LG+FC60pi27   1.0000   0.0222   LG+FC60pi27
+  28  LG+FC60pi28   1.0000   0.0247   LG+FC60pi28
+  29  LG+FC60pi29   1.0000   0.0214   LG+FC60pi29
+  30  LG+FC60pi30   1.0000   0.0115   LG+FC60pi30
+  31  LG+FC60pi31   1.0000   0.0076   LG+FC60pi31
+  32  LG+FC60pi32   1.0000   0.0130   LG+FC60pi32
+  33  LG+FC60pi33   1.0000   0.0094   LG+FC60pi33
+  34  LG+FC60pi34   1.0000   0.0467   LG+FC60pi34
+  35  LG+FC60pi35   1.0000   0.0442   LG+FC60pi35
+  36  LG+FC60pi36   1.0000   0.0322   LG+FC60pi36
+  37  LG+FC60pi37   1.0000   0.0403   LG+FC60pi37
+  38  LG+FC60pi38   1.0000   0.0150   LG+FC60pi38
+  39  LG+FC60pi39   1.0000   0.0105   LG+FC60pi39
+  40  LG+FC60pi40   1.0000   0.0215   LG+FC60pi40
+  41  LG+FC60pi41   1.0000   0.0155   LG+FC60pi41
+  42  LG+FC60pi42   1.0000   0.0102   LG+FC60pi42
+  43  LG+FC60pi43   1.0000   0.0228   LG+FC60pi43
+  44  LG+FC60pi44   1.0000   0.0123   LG+FC60pi44
+  45  LG+FC60pi45   1.0000   0.0067   LG+FC60pi45
+  46  LG+FC60pi46   1.0000   0.0004   LG+FC60pi46
+  47  LG+FC60pi47   1.0000   0.0344   LG+FC60pi47
+  48  LG+FC60pi48   1.0000   0.0114   LG+FC60pi48
+  49  LG+FC60pi49   1.0000   0.0127   LG+FC60pi49
+  50  LG+FC60pi50   1.0000   0.0124   LG+FC60pi50
+  51  LG+FC60pi51   1.0000   0.0262   LG+FC60pi51
+  52  LG+FC60pi52   1.0000   0.0065   LG+FC60pi52
+  53  LG+FC60pi53   1.0000   0.0103   LG+FC60pi53
+  54  LG+FC60pi54   1.0000   0.0142   LG+FC60pi54
+  55  LG+FC60pi55   1.0000   0.0216   LG+FC60pi55
+  56  LG+FC60pi56   1.0000   0.0199   LG+FC60pi56
+  57  LG+FC60pi57   1.0000   0.0039   LG+FC60pi57
+  58  LG+FC60pi58   1.0000   0.0113   LG+FC60pi58
+  59  LG+FC60pi59   1.0000   0.0129   LG+FC60pi59
+  60  LG+FC60pi60   1.0000   0.0118   LG+FC60pi60
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.4708
+
+ Category  Relative_rate  Proportion
+  1         0.0281         0.2500
+  2         0.2324         0.2500
+  3         0.7978         0.2500
+  4         2.9416         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -1541469.1740 (s.e. 3976.7822)
+Unconstrained log-likelihood (without tree): -1003757.4467
+Number of free parameters (#branches + #model parameters): 122
+Akaike information criterion (AIC) score: 3083182.3480
+Corrected Akaike information criterion (AICc) score: 3083182.6807
+Bayesian information criterion (BIC) score: 3084330.5053
+
+Total tree length (sum of branch lengths): 24.7403
+Sum of internal branch lengths: 8.4805 (34.2779% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon '14614.18.24' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / ultrafast bootstrap support (%)
+
++--14614.18.24
+|
+|           +--14615.5a
+|        +--| (100/100)
+|        |  +--ATA5.5-1-CV2
+|     +--| (100/100)
+|     |  |              +--CCAC_0119
+|     |  |           +--| (100/100)
+|     |  |           |  +--SAG_335-4
+|     |  |        +--| (100/100)
+|     |  |        |  |           +--EiE-15a
+|     |  |        |  |        +--| (100/100)
+|     |  |        |  |        |  +--UTEX_623
+|     |  |        |  |     +--| (100/100)
+|     |  |        |  |     |  +--SAG_13.91
+|     |  |        |  |  +--| (100/100)
+|     |  |        |  |  |  |  +--SAG_335-1a
+|     |  |        |  |  |  +--| (100/100)
+|     |  |        |  |  |     +--SAG_2417
+|     |  |        |  +--| (100/100)
+|     |  |        |     +--SAG_2155
+|     |  |     +--| (100/100)
+|     |  |     |  |  +--SAG_384-1_5_Lib
+|     |  |     |  +--| (100/100)
+|     |  |     |     +--SAG_384-1_Own-Sample
+|     |  |  +--| (100/100)
+|     |  |  |  +--SAG_7.96
+|     |  +--| (100/100)
+|     |     |                      +--CMT-NP38
+|     |     |                   +--| (100/100)
+|     |     |                   |  |  +--SAG_2562
+|     |     |                   |  +--| (100/100)
+|     |     |                   |     +--SAG_36.98
+|     |     |                +--| (100/100)
+|     |     |                |  +--SAG_255-8
+|     |     |             +--| (100/100)
+|     |     |             |  |          +--UTEX_LB_2353
+|     |     |             |  +----------| (100/100)
+|     |     |             |             +--UTEX_2793
+|     |     |     +-------| (100/100)
+|     |     |     |       |           +--------Cglobosum
+|     |     |     |       |        +--| (100/100)
+|     |     |     |       |        |  |      +--Corbicularis
+|     |     |     |       |        |  +------| (100/100)
+|     |     |     |       |        |         +--Cscutata
+|     |     |     |       |     +--| (100/100)
+|     |     |     |       |     |  |               +**Aagrestis_BONN
+|     |     |     |       |     |  |        +------| (100/100)
+|     |     |     |       |     |  |        |      +--Aagrestis_OXF
+|     |     |     |       |     |  |     +--| (94.9/81)
+|     |     |     |       |     |  |     |  |     +----Mpolymorpha
+|     |     |     |       |     |  |     |  |  +--| (96.1/95)
+|     |     |     |       |     |  |     |  |  |  +-----Ppatens
+|     |     |     |       |     |  |     |  +--| (23.4/54)
+|     |     |     |       |     |  |     |     +-----Itaiwanensis
+|     |     |     |       |     |  |  +--| (100/100)
+|     |     |     |       |     |  |  |  |  +------Afiliculoides
+|     |     |     |       |     |  |  |  +--| (100/100)
+|     |     |     |       |     |  |  |     |    +---Athaliana
+|     |     |     |       |     |  |  |     +----| (100/100)
+|     |     |     |       |     |  |  |          +----Bdistachyon
+|     |     |     |       |     |  +--| (99.5/100)
+|     |     |     |       |     |     |     +------Mendlicherianum
+|     |     |     |       |     |     |  +--| (100/100)
+|     |     |     |       |     |     |  |  |     +----Zcircumcarinatum
+|     |     |     |       |     |     |  |  |  +--| (99.8/100)
+|     |     |     |       |     |     |  |  |  |  +-------Mougeotiasp
+|     |     |     |       |     |     |  |  +--| (71.1/90)
+|     |     |     |       |     |     |  |     +--------Spratensis
+|     |     |     |       |     |     +--| (100/100)
+|     |     |     |       |     |        +--------Smuscicola
+|     |     |     |       |  +--| (100/100)
+|     |     |     |       |  |  |       +--Cbraunii
+|     |     |     |       |  |  +-------| (100/100)
+|     |     |     |       |  |          +--Nmirabilis
+|     |     |     |       +--| (100/100)
+|     |     |     |          |      +------------Catmophyticus
+|     |     |     |          |   +--| (100/100)
+|     |     |     |          |   |  +--------------Mviride
+|     |     |     |          +---| (100/100)
+|     |     |     |              |             +---------------Creinhardtii
+|     |     |     |              |          +--| (99.8/100)
+|     |     |     |              |          |  +----------------------------Umutabilis
+|     |     |     |              +----------| (100/100)
+|     |     |     |                         |  +---------Csubellipsoidea
+|     |     |     |                         +--| (100/100)
+|     |     |     |                            +------------Cvulgaris
+|     |     |  +--| (100/100)
+|     |     |  |  |        +--SAG_2147
+|     |     |  |  |     +--| (100/100)
+|     |     |  |  |     |  +--SAG_2102
+|     |     |  |  |  +--| (100/100)
+|     |     |  |  |  |  |        +--SAG_338-1_OwnSample
+|     |     |  |  |  |  |     +--| (98.1/100)
+|     |     |  |  |  |  |     |  +--SAG_338-1_SRA_Retrieved
+|     |     |  |  |  |  |  +--| (100/100)
+|     |     |  |  |  |  |  |  +----SAG_2559
+|     |     |  |  |  |  +--| (100/100)
+|     |     |  |  |  |     +--SAG_2100
+|     |     |  |  +--| (99.5/98)
+|     |     |  |     |  +--SAG_2307
+|     |     |  |     +--| (100/100)
+|     |     |  |        +--A1-1a
+|     |     +--| (100/100)
+|     |        |     +--SAG_8.96
+|     |        |  +--| (100/100)
+|     |        |  |  +--SAG_2415
+|     |        +--| (100/100)
+|     |           +--SAG_37.86
+|  +--| (100/100)
+|  |  |        +--14621.10.21
+|  |  |     +--| (100/100)
+|  |  |     |  +--ATA-1-4-KH11
+|  |  |  +--| (97.9/99)
+|  |  |  |  +--LUK_68
+|  |  +--| (100/100)
+|  |     +--NH-18.1
++--| (100/100)
+|  |  +--ATA2-1-CV14
+|  +--| (100/100)
+|     +--14614.18.18
+|
++--ATA1.5-3-RM7
+
+Tree in newick format:
+
+(14614.18.24:0.0006191096,((((14615.5a:0.0007608626,ATA5.5-1-CV2:0.0012406946)100/100:0.0620982009,(((((CCAC_0119:0.0147056418,SAG_335-4:0.0137260092)100/100:0.0189216357,((((EiE-15a:0.0119177185,UTEX_623:0.0275493326)100/100:0.0055097792,SAG_13.91:0.0121209231)100/100:0.0045351291,(SAG_335-1a:0.0114356526,SAG_2417:0.0105963531)100/100:0.0073047256)100/100:0.0047341743,SAG_2155:0.0163713033)100/100:0.0171852142)100/100:0.0107783358,(SAG_384-1_5_Lib:0.0008993411,SAG_384-1_Own-Sample:0.0001078190)100/100:0.0468701069)100/100:0.0367404231,SAG_7.96:0.1005186199)100/100:0.0450999405,((((((CMT-NP38:0.0349112938,(SAG_2562:0.0291901382,SAG_36.98:0.0246928829)100/100:0.0109703305)100/100:0.1985478741,SAG_255-8:0.2683979337)100/100:0.3038026511,(UTEX_LB_2353:0.0003283654,UTEX_2793:0.0003533103)100/100:0.8956695848)100/100:0.1061395081,((((Cglobosum:0.7202713488,(Corbicularis:0.0270012575,Cscutata:0.0528528107)100/100:0.5484970384)100/100:0.1994747531,((((Aagrestis_BONN:0.0000010000,Aagrestis_OXF:0.0001606844)100/100:0.5681568427,((Mpolymorpha:0.4516731562,Ppatens:0.4918676431)96.1/95:0.0516515030,Itaiwanensis:0.4909198754)23.4/54:0.0237999484)94.9/81:0.0428427476,(Afiliculoides:0.5457907385,(Athaliana:0.3649052648,Bdistachyon:0.4073909030)100/100:0.4114017124)100/100:0.1018132067)100/100:0.2512316804,((Mendlicherianum:0.5548733214,((Zcircumcarinatum:0.3900648160,Mougeotiasp:0.6477639474)99.8/100:0.1088558282,Spratensis:0.7362663594)71.1/90:0.0478357414)100/100:0.0860729547,Smuscicola:0.7201059609)100/100:0.0937367129)99.5/100:0.0504203077)100/100:0.0586416556,(Cbraunii:0.2365416685,Nmirabilis:0.2526053996)100/100:0.6383749446)100/100:0.1485212222,((Catmophyticus:1.0209071021,Mviride:1.2200185961)100/100:0.1928261748,((Creinhardtii:1.3019553190,Umutabilis:2.2548373528)99.8/100:0.1547017720,(Csubellipsoidea:0.8421304089,Cvulgaris:1.0721180278)100/100:0.1748569556)100/100:0.8615704318)100/100:0.3194772276)100/100:0.1763995599)100/100:0.6206366533,(((SAG_2147:0.0593326077,SAG_2102:0.0524160535)100/100:0.0192648604,(((SAG_338-1_OwnSample:0.0003758002,SAG_338-1_SRA_Retrieved:0.0001310782)98.1/100:0.0017692596,SAG_2559:0.4351884296)100/100:0.0135920625,SAG_2100:0.0172980317)100/100:0.0370837731)100/100:0.1431532185,(SAG_2307:0.0496058182,A1-1a:0.0204305116)100/100:0.0965136227)99.5/98:0.0202946753)100/100:0.0261302053,((SAG_8.96:0.0247248308,SAG_2415:0.0303799569)100/100:0.0100847685,SAG_37.86:0.0473088285)100/100:0.1133597954)100/100:0.0223332552)100/100:0.1278358367)100/100:0.0122792188,(((14621.10.21:0.0083631431,ATA-1-4-KH11:0.0204942033)100/100:0.0173737407,LUK_68:0.0352782311)97.9/99:0.0039026968,NH-18.1:0.0330516514)100/100:0.0190579028)100/100:0.0211675986,(ATA2-1-CV14:0.0214976199,14614.18.18:0.0183474370)100/100:0.0279247271)100/100:0.0406326713,ATA1.5-3-RM7:0.0021938480);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -1541469.189444
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--14614.18.24
+|
+|           +--14615.5a
+|        +--| (100)
+|        |  +--ATA5.5-1-CV2
+|     +--| (100)
+|     |  |              +--CCAC_0119
+|     |  |           +--| (100)
+|     |  |           |  +--SAG_335-4
+|     |  |        +--| (100)
+|     |  |        |  |           +--EiE-15a
+|     |  |        |  |        +--| (100)
+|     |  |        |  |        |  +--UTEX_623
+|     |  |        |  |     +--| (100)
+|     |  |        |  |     |  +--SAG_13.91
+|     |  |        |  |  +--| (100)
+|     |  |        |  |  |  |  +--SAG_335-1a
+|     |  |        |  |  |  +--| (100)
+|     |  |        |  |  |     +--SAG_2417
+|     |  |        |  +--| (100)
+|     |  |        |     +--SAG_2155
+|     |  |     +--| (100)
+|     |  |     |  |  +--SAG_384-1_5_Lib
+|     |  |     |  +--| (100)
+|     |  |     |     +--SAG_384-1_Own-Sample
+|     |  |  +--| (100)
+|     |  |  |  +--SAG_7.96
+|     |  +--| (100)
+|     |     |                      +--CMT-NP38
+|     |     |                   +--| (100)
+|     |     |                   |  |  +--SAG_2562
+|     |     |                   |  +--| (100)
+|     |     |                   |     +--SAG_36.98
+|     |     |                +--| (100)
+|     |     |                |  +--SAG_255-8
+|     |     |             +--| (100)
+|     |     |             |  |          +--UTEX_LB_2353
+|     |     |             |  +----------| (100)
+|     |     |             |             +--UTEX_2793
+|     |     |     +-------| (100)
+|     |     |     |       |           +--------Cglobosum
+|     |     |     |       |        +--| (100)
+|     |     |     |       |        |  |      +--Corbicularis
+|     |     |     |       |        |  +------| (100)
+|     |     |     |       |        |         +--Cscutata
+|     |     |     |       |     +--| (100)
+|     |     |     |       |     |  |               +--Aagrestis_BONN
+|     |     |     |       |     |  |        +------| (100)
+|     |     |     |       |     |  |        |      +--Aagrestis_OXF
+|     |     |     |       |     |  |     +--| (81)
+|     |     |     |       |     |  |     |  |     +----Mpolymorpha
+|     |     |     |       |     |  |     |  |  +--| (95)
+|     |     |     |       |     |  |     |  |  |  +-----Ppatens
+|     |     |     |       |     |  |     |  +--| (54)
+|     |     |     |       |     |  |     |     +-----Itaiwanensis
+|     |     |     |       |     |  |  +--| (100)
+|     |     |     |       |     |  |  |  |  +------Afiliculoides
+|     |     |     |       |     |  |  |  +--| (100)
+|     |     |     |       |     |  |  |     |    +---Athaliana
+|     |     |     |       |     |  |  |     +----| (100)
+|     |     |     |       |     |  |  |          +----Bdistachyon
+|     |     |     |       |     |  +--| (100)
+|     |     |     |       |     |     |     +------Mendlicherianum
+|     |     |     |       |     |     |  +--| (100)
+|     |     |     |       |     |     |  |  |     +----Zcircumcarinatum
+|     |     |     |       |     |     |  |  |  +--| (100)
+|     |     |     |       |     |     |  |  |  |  +-------Mougeotiasp
+|     |     |     |       |     |     |  |  +--| (90)
+|     |     |     |       |     |     |  |     +--------Spratensis
+|     |     |     |       |     |     +--| (100)
+|     |     |     |       |     |        +--------Smuscicola
+|     |     |     |       |  +--| (100)
+|     |     |     |       |  |  |       +--Cbraunii
+|     |     |     |       |  |  +-------| (100)
+|     |     |     |       |  |          +--Nmirabilis
+|     |     |     |       +--| (100)
+|     |     |     |          |      +------------Catmophyticus
+|     |     |     |          |   +--| (100)
+|     |     |     |          |   |  +--------------Mviride
+|     |     |     |          +---| (100)
+|     |     |     |              |             +---------------Creinhardtii
+|     |     |     |              |          +--| (100)
+|     |     |     |              |          |  +----------------------------Umutabilis
+|     |     |     |              +----------| (100)
+|     |     |     |                         |  +---------Csubellipsoidea
+|     |     |     |                         +--| (100)
+|     |     |     |                            +------------Cvulgaris
+|     |     |  +--| (100)
+|     |     |  |  |        +--SAG_2147
+|     |     |  |  |     +--| (100)
+|     |     |  |  |     |  +--SAG_2102
+|     |     |  |  |  +--| (100)
+|     |     |  |  |  |  |        +--SAG_338-1_OwnSample
+|     |     |  |  |  |  |     +--| (100)
+|     |     |  |  |  |  |     |  +--SAG_338-1_SRA_Retrieved
+|     |     |  |  |  |  |  +--| (100)
+|     |     |  |  |  |  |  |  +----SAG_2559
+|     |     |  |  |  |  +--| (100)
+|     |     |  |  |  |     +--SAG_2100
+|     |     |  |  +--| (98)
+|     |     |  |     |  +--SAG_2307
+|     |     |  |     +--| (100)
+|     |     |  |        +--A1-1a
+|     |     +--| (100)
+|     |        |     +--SAG_8.96
+|     |        |  +--| (100)
+|     |        |  |  +--SAG_2415
+|     |        +--| (100)
+|     |           +--SAG_37.86
+|  +--| (100)
+|  |  |        +--14621.10.21
+|  |  |     +--| (100)
+|  |  |     |  +--ATA-1-4-KH11
+|  |  |  +--| (99)
+|  |  |  |  +--LUK_68
+|  |  +--| (100)
+|  |     +--NH-18.1
++--| (100)
+|  |  +--ATA2-1-CV14
+|  +--| (100)
+|     +--14614.18.18
+|
++--ATA1.5-3-RM7
+
+
+Consensus tree in newick format: 
+
+(14614.18.24:0.0006184998,((((14615.5a:0.0007601377,ATA5.5-1-CV2:0.0012396441)100:0.0620933014,(((((CCAC_0119:0.0147045982,SAG_335-4:0.0137240987)100:0.0189200734,((((EiE-15a:0.0119157679,UTEX_623:0.0275459328)100:0.0055113147,SAG_13.91:0.0121188997)100:0.0045342023,(SAG_335-1a:0.0114344242,SAG_2417:0.0105950412)100:0.0073035040)100:0.0047326383,SAG_2155:0.0163702686)100:0.0171836360)100:0.0107763452,(SAG_384-1_5_Lib:0.0008984141,SAG_384-1_Own-Sample:0.0001072739)100:0.0468657840)100:0.0367364325,SAG_7.96:0.1005097496)100:0.0450965570,((((((CMT-NP38:0.0349084933,(SAG_2562:0.0291870872,SAG_36.98:0.0246898408)100:0.0109683866)100:0.1985096395,SAG_255-8:0.2683689686)100:0.3037552388,(UTEX_LB_2353:0.0003290432,UTEX_2793:0.0003521637)100:0.8955076437)100:0.1061479162,((((Cglobosum:0.7200595832,(Corbicularis:0.0270002219,Cscutata:0.0528438734)100:0.5483099580)100:0.1995343739,((((Aagrestis_BONN:0.0000029625,Aagrestis_OXF:0.0001595570)100:0.5679852857,((Mpolymorpha:0.4515431753,Ppatens:0.4917182813)95:0.0516504467,Itaiwanensis:0.4907687138)54:0.0237935238)81:0.0428361992,(Afiliculoides:0.5455998613,(Athaliana:0.3648143292,Bdistachyon:0.4072694946)100:0.4112654216)100:0.1018323321)100:0.2511489151,((Mendlicherianum:0.5547044486,((Zcircumcarinatum:0.3899464110,Mougeotiasp:0.6475644610)100:0.1088570407,Spratensis:0.7360419282)90:0.0478279733)100:0.0860489507,Smuscicola:0.7198959154)100:0.0937444836)100:0.0503998474)100:0.0586386759,(Cbraunii:0.2364979438,Nmirabilis:0.2525583790)100:0.6382233193)100:0.1484866046,((Catmophyticus:1.0205575373,Mviride:1.2196555024)100:0.1929399112,((Creinhardtii:1.3015496175,Umutabilis:2.2542709174)100:0.1548282030,(Csubellipsoidea:0.8419615471,Cvulgaris:1.0718792664)100:0.1748541570)100:0.8613487381)100:0.3194209115)100:0.1763680832)100:0.6205340839,(((SAG_2147:0.0593235988,SAG_2102:0.0524093205)100:0.0192683310,(((SAG_338-1_OwnSample:0.0003751659,SAG_338-1_SRA_Retrieved:0.0001304760)100:0.0017682520,SAG_2559:0.4351307455)100:0.0135917857,SAG_2100:0.0172961076)100:0.0370798748)100:0.1431366596,(SAG_2307:0.0496003181,A1-1a:0.0204279956)100:0.0965045247)98:0.0203081599)100:0.0261164516,((SAG_8.96:0.0247211845,SAG_2415:0.0303773612)100:0.0100834644,SAG_37.86:0.0473045928)100:0.1133474881)100:0.0223300510)100:0.1278228982)100:0.0122777305,(((14621.10.21:0.0083623922,ATA-1-4-KH11:0.0204914284)100:0.0173728724,LUK_68:0.0352745433)99:0.0039009033,NH-18.1:0.0330482078)100:0.0190555606)100:0.0211663583,(ATA2-1-CV14:0.0214953765,14614.18.18:0.0183448130)100:0.0279218952)100:0.0406294195,ATA1.5-3-RM7:0.0021926724);
+
+ALISIM COMMAND
+--------------
+Currently, we only support exporting AliSim commands automatically from the analysis for common models of DNA, Protein, Binary, and Morphological data. To simulate data from other models (mixture, lie-markov, etc), please refer to the User Manual of AliSim. Thanks!
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Wed Dec 13 06:26:33 2023
+Total CPU time used: 3948988.485 seconds (1096h:56m:28s)
+Total wall-clock time used: 201041.9619 seconds (55h:50m:41s)
+
