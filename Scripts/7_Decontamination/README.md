@@ -19,13 +19,14 @@ python [script] [inputFile] [RenameHeaders]>>[FileOutput]
 ```
 where the FileOutput is the concatenated file for all databases.
 I used the following combinations:
+```
 "arch_neg" for the Archea set
 "bact_neg" for the Bacteria set
 "virus_neg" for the Viridae set
 "fungi_neg" for te Fungi set
 "plast_neg" for the Plastid set
 "kleb_pos" for Klebsormidiaceae positive (NIES-2285)
-
+```
 This means, for example, that for every fasta header for bacteria, we now have bact_neg-n where n is the number. This is important since the step after the decontamination use these as a reference (you can decide on your own what the names are, but they have to be consistent and preferable without any spaces since a lot of programs can not interpret a space properly).
 
 Then simply use the commands:
