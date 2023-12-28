@@ -1,6 +1,0 @@
-# Creating a Reference DB
-Keep in mind you have to make a blast database first. E.g. below for creating a protein database from a reference fasta file
-
-```
-makeblastdb -in [REFERENCE_GENOME_FASTAFILE] -parse_seqids -title "[NAME_OF_YOUR_DB]" -dbtype prot -blastdb_version 4 #We work with version 4
-```
