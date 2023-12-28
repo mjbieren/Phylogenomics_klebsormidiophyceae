@@ -1,0 +1,6 @@
+arch_neg	-	Archea
+bact_neg	-	Bacteria
+virus_neg	-	Viridae
+fungi_neg	-	Fungi
+plast_neg	-	Plastid
+kleb_pos	+	Klebsormidiaceae
