@@ -17,7 +17,7 @@ simply use the script by the command:
 ```
 python [script] [inputFile] [RenameHeaders]>>[FileOutput]
 ```
-where the FileOutput is the concatenated file for all databases.
+where the FileOutput is the concatenated file for all sub-databases (e.g., RefSeq Bacteria, RefSeq Archeae, etc).
 I used the following combinations:
 ```
 "arch_neg" for the Archea set
