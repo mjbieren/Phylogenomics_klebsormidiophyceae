@@ -9,3 +9,6 @@ Please feel free to contact me at:
 maaikejacobine.bierenbroodspot@uni-goettingen.de
 <br/>
 And I will add your UNIX system to the list of executables.
+
+Furthermore, I've used the [**boost**](https://www.boost.org/) Library (v1.78) in every project, so you should install this as well on your unix system if you want to compile it. <br/>
+I'm convinced you can use the newest version since C++ is 99% of the time backward compatible (Unlike Python and R :') )
