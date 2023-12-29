@@ -1,10 +1,10 @@
 #!/bin/bash
 
-APPPF_PATH=/home/uni08/applbioinfdevries/MAAIKE/Programs/APPPFormat/APPPFormat_HPC.out
-TREE_FILES=/home/uni08/applbioinfdevries/DATA_ILLUMINA/Klebsormidium_SPP/SubTrees/NewFullTree/New_Tax_FixCurrentBiology/New_Tax3_Filtered_WithTrees/
-TREEFORMAT=treefile
-APPF_OUTPUT=/home/uni08/applbioinfdevries/DATA_ILLUMINA/Klebsormidium_SPP/SubTrees/NewFullTree/New_Tax_FixCurrentBiology/APPPFormat_Output/
-TAXANOMIC_GROUP_FILE=/home/uni08/applbioinfdevries/DATA_ILLUMINA/Klebsormidium_SPP/SubTrees/EtcInformation/Reduced_Taxa_ForMoreAlignments_Klebso.txt
+APPPF_PATH= #APPPFormat.out
+TREE_FILES= #Path to the treefiles aka output of step 11.
+TREEFORMAT=treefile #Name of the file extension without a .
+APPF_OUTPUT= #Output Folder for the program
+TAXANOMIC_GROUP_FILE= #Path to your taxanomic group file
 
 #Program format can be any order after program path
 #[Program_Path] -i [PathToTrees] -t [FileExtensionOfTrees] -r [OutputFolderPath] -g [TaxonomicGroupFilePath] -m [MafftFilesPath:NOT REQUIRED]
