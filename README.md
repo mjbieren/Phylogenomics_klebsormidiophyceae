@@ -18,7 +18,7 @@ Further Extraction was then done with the RNA from the Spectrum™ Plant Total R
 At Novogene (Cambridge, UK), the samples underwent quality checks using a Bionanalyzer (Agilent Technologies Inc., Santa Clara, CA, USA), and library preparation was performed based on polyA enrichment and using directional mRNA library preparation. The libraries were quality checked and sequenced using the NovaSeq 6000 platform (Illumina) with Novogene dual adapters: 5’- AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT-3’ for read 1 and 5’- GATCGGAAGAGCACACGTCTGAACTCCAGTCACGGATGACTATCTCGTATGCCGTCTTCTGCTTG-3’
 
 ## 2. FastQC
-FastQC was used as a quality control, as very bad samples (Either from our in-house or downloaded from the SRA set) were then identified to be removed. Even if we removed the bad reads, some of them had such a low read count after trimming that we decided not to include them in our sample list and, therefore not included within the project. For more information on how FastQC was used within the project, go [here](Scripts/02_Trinity). For more information on FastQC please go to their site [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+[FastQC](https://github.com/s-andrews/FastQC) was used as a quality control, as very bad samples (Either from our in-house or downloaded from the SRA set) were then identified to be removed. Even if we removed the bad reads, some of them had such a low read count after trimming that we decided not to include them in our sample list and, therefore not included within the project. For more information on how FastQC was used within the project, go [here](Scripts/02_Trinity). For more information on FastQC please go to their site [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
 ## 3. Trinity *de novo* Assembly
 After FastQC quality control, all samples were then assembled with the Trinity pipeline. First, the adapters were trimmed with [Trimmomatic](https://github.com/usadellab/Trimmomatic) with the settings 
@@ -64,8 +64,13 @@ To obtain the actual positive set. I've created a tool that automatically obtain
 
 See [GPDS](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/08_GetPositiveDataSet_GPDS/README.md) for a more in-depth overview of what we did.
 
-## 9. OrthoFinder
+## 9 OrthoFinder
+For the next step we have to run [OrthoFinder](https://github.com/davidemms/OrthoFinder) ([DM Emms & S Kelly](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1832-y)) to obtain the OrtoGroups. For this we use a guide tree and all the positive samples we have, and included also our outgroups. <br/>
+See [OrthoFinder](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/09_OrthoFinder) for a more in-depth overview of what we did.
 
+## 10. OrthoGroup Sequence Grabber
+This is another tool I've created to obtain all the Fasta Blocks (fasta block = fasta header + sequence) for each OrthoGroup and create a Fasta output file. Furthermore, it can take into consideration how many taxonomic groups you want to have as a minimum for each Fasta File as a filter. <br/>
+See [OSG](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/10_OrthogroupSequenceGrabber_OSG) for a more in-depth overview of what we did.
 
 
 # Notes for future development
