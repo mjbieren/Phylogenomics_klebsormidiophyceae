@@ -49,12 +49,12 @@ After getting the SuperTranscript and confirming they are above the completeness
 See [TransDecoder](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/05_Transdecoder) for a more in-depth overview of what we did.
 
 ## 7. BUSCO II
-Another quality control is to determine if we still are above the completeness threshold (70%). This is because we used the single best only option, and some of the values dropped a bit.
-See [BUSCO_II](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/06_BUSCO_II/README.md) for a more in-dept overview of what we did.
+Another quality control is to determine if we still are above the completeness threshold (70%). This is because we used the single best option, and some of the values dropped a bit.
+See [BUSCO_II](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/06_BUSCO_II/README.md) for a more in-depth overview of what we did.
 
 
 ## 8. Decontamination
-To remove potential contaminatants we conducted sequence similarity searches against a comprehensive database that included proteins from various sources. Which are a positive set 
+To remove potential contaminants, we conducted sequence similarity searches against a comprehensive database that included proteins from various sources. Which were a positive set [*Klebsormidium nitens* NIES-2285](https://www.nature.com/articles/ncomms4978)
 
 
 # Notes for future development
