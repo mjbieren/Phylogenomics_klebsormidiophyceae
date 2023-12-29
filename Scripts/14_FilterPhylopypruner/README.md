@@ -1,5 +1,5 @@
 # Filter Phylopypruner Filter
-To run this step, edit lines 3 to 8 within the FilterPPP_Result_AndRemoveHeaders_AndRemoveGaps.sh. This tool can run with just 1 CPU, and output files can not be bigger than 1 GB of RAM. It can run on any 64-bit machine on the front end and is fast. 5% of the time is the calculations/parsing of the input files and 95% is writing them to the output folder. Which is heavily depending on the speed of your disks and/or your network speed.
+To run this step, edit lines 3 to 8 within the [FilterPPP_Result_AndRemoveHeaders_AndRemoveGaps.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/14_FilterPhylopypruner/FilterPPP_Result_AndRemoveHeaders_AndRemoveGaps.sh). <br/>This tool can run with just 1 CPU, and output files can not be bigger than 1 GB of RAM. It can run on any 64-bit machine on the front end and is fast. 5% of the time is the calculations/parsing of the input files and 95% is writing them to the output folder. Which is heavily depending on the speed of your disks and/or your network speed.
 
 If you require the size of the output files to change please contact me at maaikejacobine.bierenbroodspot@uni-goettingen.de
 
