@@ -21,12 +21,12 @@ At Novogene (Cambridge, UK), the samples underwent quality checks using a Bionan
 [FastQC](https://github.com/s-andrews/FastQC) ([Simon Andrews](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)) was used as a quality control, as very bad samples (Either from our in-house or downloaded from the SRA set) were then identified to be removed. Even if we removed the bad reads, some of them had such a low read count after trimming that we decided not to include them in our sample list and, therefore not included within the project. For more information on how FastQC was used within the project, go to [FASTQC](Scripts/02_Trinity). For more information on FastQC please go to their site http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
 ## 3. Trinity *de novo* Assembly
-After FastQC quality control, all samples were then assembled with the Trinity pipeline. <br/>First, the adapters were trimmed with [Trimmomatic](https://github.com/usadellab/Trimmomatic) ([A. M Bolger _et al_2014](https://academic.oup.com/bioinformatics/article/30/15/2114/2390096)) with the settings:
+After FastQC quality control, all samples were then assembled with the Trinity pipeline. <br/>First, the adapters were trimmed with [Trimmomatic](https://github.com/usadellab/Trimmomatic) ([A. M Bolger et al_2014](https://academic.oup.com/bioinformatics/article/30/15/2114/2390096)) with the settings:
 ```
 -trimmomatic “novogene_adapter_sequences.fa:2:30:10:2:keepBothReads LEADING:3 TRAILING:3 MINLEN:36”
 ```
 
-Followed by running [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) ([Haas et al 2013](https://www.nature.com/articles/nprot.2013.084)) with the command 
+Followed by running [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) ([Haas *et al* 2013](https://www.nature.com/articles/nprot.2013.084)) with the command 
 ```
 Trinity --seqType fq --left [LEFT_READS] --right [RIGHT_READS] --output [OUTPUT_FOLDER] --SS_lib_type RF --CPU 48 --trimmomatic --full_cleanup --max_memory 350G --quality_trimming_params  "ILLUMINACLIP:novogene_adapter_sequences.fa:2:30:10:2:keepBothReads LEADING:3 TRAILING:3 MINLEN:36"
 ```
@@ -35,7 +35,7 @@ I highly recommend reading Trinity's [Wiki site](https://github.com/trinityrnase
 See [TRINITY](Scripts/02_Trinity) for a more in-depth overview of what we did.
 
 ## 4. SuperTranscripts
-[SuperTranscripts](https://github.com/trinityrnaseq/trinityrnaseq/wiki/SuperTranscripts) ([Davidson](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1284-1)) et al. was inferred by collapsing splicing isoforms using the Trinity implementation. <br/>See [SuperTranscripts](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/03_SuperTranscript) for a more in-depth overview of what we did.
+[SuperTranscripts](https://github.com/trinityrnaseq/trinityrnaseq/wiki/SuperTranscripts) ([Davidson *et al* 2017](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1284-1)) et al. was inferred by collapsing splicing isoforms using the Trinity implementation. <br/>See [SuperTranscripts](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/03_SuperTranscript) for a more in-depth overview of what we did.
 
 ## 5. BUSCO I
 To determine the quality (completeness) of our assemblies we followed up by running [BUSCO](https://busco.ezlab.org/) ([Seppey *et al* 2019](https://link.springer.com/protocol/10.1007/978-1-4939-9173-0_14)). using the ‘eukaryota_odb10’ reference set. <br/>See [BUSCO_I](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/04_BUSCO_I) for a more in-depth overview of what we did.
@@ -54,7 +54,7 @@ See [BUSCO_II](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blo
 
 ## 8. Decontamination
 ### Setting up the Decontamination
-To remove potential contaminants, we conducted sequence similarity searches against a comprehensive database that included proteins from various sources. Which were a positive set [*Klebsormidium nitens* NIES-2285](https://www.nature.com/articles/ncomms4978) and 4 potential contaminants through the RefSeq (downloaded on 17 Augustus 2020) representative bacterial genomes (11,318 genomes), fungi (2,397), all available viruses, archaea (1,833), and plastid genes (78,2087) (downloaded on 3 April 2023). We use this database to employ [MMseqs2](https://github.com/soedinglab/MMseqs2) ([Steinegger and Söding](https://www.nature.com/articles/nbt.3988)) for the search, using an iterative approach with increasing sensitivities and maintaining a maximum of 10 hits (--start-sens 1 --sens-steps 3 -s 7 --alignment-mode 3 --max-seqs 10). 
+To remove potential contaminants, we conducted sequence similarity searches against a comprehensive database that included proteins from various sources. Which were a positive set [*Klebsormidium nitens* NIES-2285](https://www.nature.com/articles/ncomms4978) and 4 potential contaminants through the RefSeq (downloaded on 17 Augustus 2020) representative bacterial genomes (11,318 genomes), fungi (2,397), all available viruses, archaea (1,833), and plastid genes (78,2087) (downloaded on 3 April 2023). We use this database to employ [MMseqs2](https://github.com/soedinglab/MMseqs2) ([Steinegger and Söding 2017](https://www.nature.com/articles/nbt.3988)) for the search, using an iterative approach with increasing sensitivities and maintaining a maximum of 10 hits (--start-sens 1 --sens-steps 3 -s 7 --alignment-mode 3 --max-seqs 10). 
 <br/>
 This will give a blast output file in the .outfmt6 format. <br/>
 See [Decontamination](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/07_Decontamination) for a more in-depth overview of what we did.
@@ -65,7 +65,7 @@ To obtain the actual positive set. I've created a tool that automatically obtain
 See [GPDS](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/08_GetPositiveDataSet_GPDS/README.md) for a more in-depth overview of what we did.
 
 ## 9 OrthoFinder
-For the next step, we have to run [OrthoFinder](https://github.com/davidemms/OrthoFinder) ([DM Emms & S Kelly](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1832-y)) to obtain the OrtoGroups. For this we use a guide tree and all the positive samples we have, and included also our outgroups. <br/>
+For the next step, we have to run [OrthoFinder](https://github.com/davidemms/OrthoFinder) ([DM Emms & S Kelly 2019](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1832-y)) to obtain the OrtoGroups. For this we use a guide tree and all the positive samples we have, and included also our outgroups. <br/>
 See [OrthoFinder](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/09_OrthoFinder) for a more in-depth overview of what we did.
 
 ## 10. OrthoGroup Sequence Grabber
@@ -87,7 +87,7 @@ We basically started this set to define a good set that represents the In-Groups
 
 
 ## 11. MAFFT/IQTree
-As preparation for [PhyloPyPruner](https://pypi.org/project/phylopypruner/) to remove all the paralogs, we have to align all the sequences (Output from OSG) with [MAFFT](https://mafft.cbrc.jp/alignment/software/) ([K. Katoh and D.M. Standley](https://academic.oup.com/mbe/article/30/4/772/1073398)) and then create trees out of the MSAs with [IQTree](http://www.iqtree.org/) ([Bui Quang Minh *et al*](https://academic.oup.com/mbe/article/37/8/2461/5859215)) <br/>
+As preparation for [PhyloPyPruner](https://pypi.org/project/phylopypruner/) to remove all the paralogs, we have to align all the sequences (Output from OSG) with [MAFFT](https://mafft.cbrc.jp/alignment/software/) ([K. Katoh and D.M. Standley 2013](https://academic.oup.com/mbe/article/30/4/772/1073398)) and then create trees out of the MSAs with [IQTree](http://www.iqtree.org/) ([Bui Quang Minh *et al* 2020](https://academic.oup.com/mbe/article/37/8/2461/5859215)) <br/>
 See [MAFFT/IQTree](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/11_MAFFT_IQtree) for a more in-depth overview of what we did.
 For this step, IQTree2 V2.0.6 was used. See [IQtree Exectuables](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/IQTree)
 
@@ -142,11 +142,11 @@ Furthermore, in this step, we also added the parameters -a -h, To remove the Gen
 
 ## 20. PREQUAL
 This step is needed since we want to remove the non-informative sites from each alignment file. So that when we concatenate all the files in one big alignment without having a lot of "noise".
-During this step, Preqal, ginsi, IQTree, and clipkit are run. 
+During this step, [PREQUAL](https://github.com/simonwhelan/prequal) ([Simon Whelan *et al* 2018](https://academic.oup.com/bioinformatics/article/34/22/3929/5026659)), [ginsi](https://mafft.cbrc.jp/alignment/software/) ([K. Katoh and D.M. Standley 2013](https://academic.oup.com/mbe/article/30/4/772/1073398)), [IQTree](http://www.iqtree.org/) ([Bui Quang Minh *et al* 2020](https://academic.oup.com/mbe/article/37/8/2461/5859215)), and [ClipKIT](https://github.com/JLSteenwyk/ClipKIT) ([J.L. Steenwijk *et al* 2020](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001007) are run. 
 See [Prequal](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/16_Prequal) for a more in-depth overview of what we did.
 
 ## 21. Concatenating alignments file.
-We did this step to concatenate all the alignments. We used [Phyx](https://github.com/FePhyFoFum/phyx) ([JW Brown _et al_ 2017](https://academic.oup.com/bioinformatics/article/33/12/1886/2975328)) a tool that performs phylogenetic analysis on trees and sequences.
+We did this step to concatenate all the alignments. We used [Phyx](https://github.com/FePhyFoFum/phyx) ([JW Brown *et al* 2017](https://academic.oup.com/bioinformatics/article/33/12/1886/2975328)) a tool that performs phylogenetic analysis on trees and sequences.
 
 See [ConcatenateSequences](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/17_ConcatenateSequences) for a more in-depth overview of what we did.
 
@@ -157,7 +157,7 @@ We used 65, because any lower, we removed too many informative sites,  and highe
 See [ClipKIT](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/18_Clipkit) for a more in-depth overview of what we did.
 
 ## 23 ModelFinder
-To determine what the best tree model for our concatenated alignment was, we ran IQtree V1.6.12. See [IQtree Exectuables](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/IQTree)
+To determine what the best tree model for our concatenated alignment was, we ran [ModelFinder](http://www.iqtree.org/ModelFinder/) ([S Kalyaanamoorthy *et al* 2017](https://www.nature.com/articles/nmeth.4285) with  IQtree V1.6.12. See [IQtree Exectuables](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/IQTree)
 ```
 iqtree -nt 20 -m TESTONLY -madd LG+C60 -msub nuclear -s [AlignmentFileInput]
 ```
@@ -175,8 +175,6 @@ On the result of the step above, we then perform a posterior mean site frequency
 ```
 iqtree2 -nt 20 -m LG+C60+F+G -msub nuclear -s [Alignment_File_Output_Step22] -bb 1000 -alrt 1000 -pre [Your_Choice_Of_Prefix_For_Output_File] -ft [Result_Step_Above]
 ```
-
-_Spoiler: there was no difference between the trees :/_
 
 >[!NOTE]
 >Furthermore, we also used the LG+F+I+G model since that was the initial tree model from the old set. However, after running PMSF on that tree output, the resulting tree of the PMSF is the same as the result above. (results not shown)
