@@ -7,7 +7,7 @@ In my case BUSCO was a module already installed on our High Performance Cluster 
 conda create -n busco -c conda-forge -c bioconda busco
 ```
 
-Afterward simply edit the [Busco_I.sh](Scripts/04_BUSCO_I/Busco_I.sh) script and run it.
+Afterward simply edit the [Busco_I.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/04_BUSCO_I/Busco_I.sh) script and run it.
 
 
 For more information on BUSCO please go to their website [BUSCO](https://busco.ezlab.org/)
