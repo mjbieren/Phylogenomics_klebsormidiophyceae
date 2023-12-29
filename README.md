@@ -97,6 +97,31 @@ See [APPPFilter](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/t
 
 
 ## 13. PhyloPyPruner
+At this step, we remove all the paralogs from the OrtoGroups to get the desired species per OrthoGroup (Fasta file).
+For the different sets, we used different parameters, which can be found in the following scripts.
+1. Old Set: [PhyloPruner_I_Conda_Gandalf_Tax10.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/13_Phylopypruner/Scripts/13_Phylopypruner/PhyloPruner_I_Conda_Gandalf_Tax10.sh)
+2. New Set: [PhyloPruner_I_Conda_Gandalf_CombinedSetTax21_New1.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/13_Phylopypruner/Scripts/13_Phylopypruner/PhyloPruner_I_Conda_Gandalf_CombinedSetTax21_New1.sh)
+
+See [PhyloPyPruner](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/13_Phylopypruner) for a more in-depth overview of what we did.
+
+To get more information on PhyloPyPruner please follow the website link https://pypi.org/project/phylopypruner/
+
+## 14. Filter the PhyloPyPruner Result
+After Phylopypruner, we have to filter the result. This is due to the fact that how Phylopypruner works and basically prunes parts of the tree and creates sub-OrthoGroup files. E.g. N2_OG0000001**\_1**.fa and NN2_OG0000001**\_2**.fa. These files can have a low and high amount of species, but can underrepresent the taxonomic groups. Hence, we have to filter it again, to remove the ones that are below the Taxonomic Group threshold.
+We've used a different For this we've created a tool called FilterPPPResult.out. Like OSG it takes a Taxonomic group file and filters the Files out that do not meet the Threshold. Furthermore, it can remove the Gene IDs (keep only the strain name) and remove the alignments from the sequences, which is needed for the PREQUAL step (later in the Pipeline).
+Different Taxonomic Group files and thresholds were used for the 2 different sets.
+1. Old Set: [Klebsormidiophyceae_TaxonomicGroupFile_3_Taxa_PrequalFilter.txt](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/10_OrthogroupSequenceGrabber_OSG/TaxonomicGroupFiles/Klebsormidiophyceae_TaxonomicGroupFile_3_Taxa_PrequalFilter.txt) with a 2 Threshold (2/3)
+2. New Set: [Klebsormidiophyceae_TaxonomicGroupFile_40_Taxa_AfterPPP_Tax21Set_AndCombinedSet.txt](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/10_OrthogroupSequenceGrabber_OSG/TaxonomicGroupFiles#:~:text=Klebsormidiophyceae_TaxonomicGroupFile_40_Taxa_AfterPPP_Tax21Set_AndCombinedSet.txt) with a 21 Threshold (21/40)
+
+Scripts execution are the same for both
+
+See [FilterPPPResult](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/14_FilterPhylopypruner) for a more in-depth overview of what we did.
+
+
+## 15. Combine OrthoGroup Sets
+
+
+
 
 
 # Notes for future development
