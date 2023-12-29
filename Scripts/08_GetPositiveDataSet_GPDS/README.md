@@ -5,7 +5,7 @@ If you require this to change please contact me at maaikejacobine.bierenbroodspo
 
 This tool basically interprets the *.outfmt6 file and obtains the corresponding matching fasta blocks (1 Fasta block = 1 Header + 1 sequence).
 It will create different fasta files based on the header file.
-An example can be found with [Headerfile.GPDS.txt](Scripts/8_GetPositiveDataSet_GPDS/Headerfile_GPDS.txt)
+An example can be found with [Headerfile.GPDS.txt](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/08_GetPositiveDataSet_GPDS/Headerfile_GPDS.txt)
 
 It will create different Fasta files (objects) based on each line within the Headerfile. And copy the fasta block object pointers into the fasta file object. Which are then used to create the output files (1 Fasta file object = 1 Fasta file)
 
@@ -46,4 +46,4 @@ The 2nd will be interpreted as a non-contaminant, and the fasta file name will b
 -t				Unset the strict decontamination, ignore the positive set if the result is weaker (default is strict is on, best
 				e-value is the one taken)
 ```
-Alternatively you can edit [GPDS.sh](Scripts/8_GetPositiveDataSet_GPDS/GPDS.sh] and run the script
+Alternatively you can edit [GPDS.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/08_GetPositiveDataSet_GPDS/GPDS.sh) and run the script
