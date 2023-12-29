@@ -11,7 +11,7 @@ To install MMseqs2 please follow the link https://github.com/soedinglab/MMseqs2
 ## Decontamination database
 As a decontamination database, we downloaded on 17 August 2020 the full RefSeq database for Bacterial, Fungi, all available viruses, Archae genomes, and additionally, all plastids. For the Positive set, we used NIES 2285 (Klebsormidium nitens, otherwise known as strain SAG 335-1a). 
 
-To make it easier to define what is a decontaminant and what is not I've reformatted all fasta headers with the script simplify_headers_for_blastdb.py made by Dr. Iker Irrisari.
+To make it easier to define what is a decontaminant and what is not I've reformatted all fasta headers with the script [simplify_headers_for_blastdb.py](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/07_Decontamination/simplify_headers_for_blastdb.py) made by Dr. Iker Irrisari.
 simply use the script by the command:
 
 ```
@@ -42,11 +42,11 @@ Similar to creating a database for decontamination, you have the same commands f
 mmseqs createdb trinity_genes.fasta.transdecoder.pep StrainName_Klebsome_db.db || module purge && exit -1
 mmseqs createindex StrainName_Klebsome_db.db tmp || module purge && exit -1
 ```
-You can also use the script [ConvertToMMseqsDatabase.sh](Scripts/7_Decontamination/ConvertToMMseqsDatabase.sh) and run it in the same folder as the TransDecoder output .pep file.
+You can also use the script [ConvertToMMseqsDatabase.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/07_Decontamination/ConvertToMMseqsDatabase.sh) and run it in the same folder as the TransDecoder output .pep file.
 
 
 ## Running the script
-Now simply run the script [Decontamination_MMSEQS_Memmode.sh](Scripts/7_Decontamination/Decontamination_MMSEQS_Memmode.sh)
-Don't forget to change input files on line: 8,9,10,11.
+Now simply run the script [Decontamination_MMSEQS_Memmode.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/07_Decontamination/Decontamination_MMSEQS_Memmode.sh)
+Don't forget to change the variables on lines: 8,9,10,11.
 
 The output will be a simple outfmt6 output, identical to a blast output file with outfmt6 format.
