@@ -4,4 +4,4 @@ Alternatively, you can also install Trinity within a conda environment.
 
 
 For more information, go to the [Trinity Github](https://github.com/trinityrnaseq/trinityrnaseq) <br/>
-I highly recommend reading their [Wiki site](https://github.com/trinityrnaseq/trinityrnaseq/wiki) which explains everything pretty well.
+I highly recommend reading their [Wiki site](https://github.com/trinityrnaseq/trinityrnaseq/wiki), which explains everything pretty well.
