@@ -19,7 +19,7 @@ It will then create the fasta output files (which can be quite large depending o
 Finally a summary file is created if the user wishes so.
 
 ## OSG (Orthogroup Sequence Grabber)
-This tool is created with the boost library (v1.78). And is developed in Visual Studio 2019 with the GCC compiler (For remote Linux).  I've compiled 3 different executables (they are portable!) under Debian 10 but also work and tested on Debian 11 ([OSG_Debian.out](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG)), Scientific Linux 7, which is based on Red Hat ([OSG_HPC.out](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG), and Arch Linux, which is still in beta ([OSG_Arch.out]([Executables/OSG](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG))).
+This tool is created with the boost library (v1.78). And is developed in Visual Studio 2019 with the GCC compiler (For remote Linux).  I've compiled 3 different executables (they are portable!) under Debian 10 but also work and tested on Debian 11 ([OSG_Debian.out](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG)), Scientific Linux 7, which is based on Red Hat ([OSG_HPC.out](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG)), and Arch Linux, which is still in beta ([OSG_Arch.out](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG)).
 
 Either make your own executable with the corresponding source files or use one of the already existing executables.
 
