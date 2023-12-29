@@ -26,7 +26,7 @@ After FastQC quality control, all samples were then assembled with the Trinity p
 -trimmomatic “novogene_adapter_sequences.fa:2:30:10:2:keepBothReads LEADING:3 TRAILING:3 MINLEN:36”
 ```
 
-Followed by running [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) ([Haas _et al_ 2013](https://www.nature.com/articles/nprot.2013.084)) with the command 
+Followed by running [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) ([Haas et al 2013](https://www.nature.com/articles/nprot.2013.084)) with the command 
 ```
 Trinity --seqType fq --left [LEFT_READS] --right [RIGHT_READS] --output [OUTPUT_FOLDER] --SS_lib_type RF --CPU 48 --trimmomatic --full_cleanup --max_memory 350G --quality_trimming_params  "ILLUMINACLIP:novogene_adapter_sequences.fa:2:30:10:2:keepBothReads LEADING:3 TRAILING:3 MINLEN:36"
 ```
