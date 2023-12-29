@@ -14,6 +14,6 @@ For this to work you need to use a reference database first (from a reference ge
 makeblastdb -in [REFERENCE_GENOME_FASTAFILE] -parse_seqids -title "[NAME_OF_YOUR_DB]" -dbtype prot -blastdb_version 4
 ```
 
-Then simply edit the [TransDecoder_Single_Best_HPC.sh](Scripts/5_Transdecoder/TransDecoder_Single_Best_HPC.sh) script and run it.
+Then simply edit the [TransDecoder_Single_Best_HPC.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/05_Transdecoder/TransDecoder_Single_Best_HPC.sh) script and run it.
 
 For more information on TransDecoder go to their website: [Transdecoder](https://github.com/TransDecoder/TransDecoder/wiki)
