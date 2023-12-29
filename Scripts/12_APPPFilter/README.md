@@ -5,7 +5,7 @@ It then moves the tree files to the output folder and also copies the alignment 
 
 It needs a taxonomic group file as a guidance for the species/strain names (See [TaxonomicGroupFiles](/Scripts/10_OrthogroupSequenceGrabber_OSG/TaxonomicGroupFiles/) for examples)
 
-To run it, edit the [APPPF.sh](/Scripts/12_APPPFilter/APPPF.sh) file and edit lines number 3 to 7
+To run it, edit the [APPPF.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/12_APPPFilter/APPPF.sh) file and edit lines number 3 to 7
 This tool can run with just 1 cpu and output files can not be bigger than 1gb of RAM. It can run on any 64-bit machine on the front end and is super fast. 5% of the time is the calculations. 95% of the time, it parses the input file (loading to memory) and writes the output files. Which is heavily depending on the speed of your disks and/or your network speed.
 
 ## APPPFormat (Apply Phylopypruner Format)
