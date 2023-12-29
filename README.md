@@ -89,6 +89,7 @@ We basically started this set to define a good set that represents the In-Groups
 ## 11. MAFFT/IQTree
 As preparation for [PhyloPyPruner](https://pypi.org/project/phylopypruner/) to remove all the paralogs, we have to align all the sequences (Output from OSG) with [MAFFT](https://mafft.cbrc.jp/alignment/software/) ([K. Katoh and D.M. Standley](https://academic.oup.com/mbe/article/30/4/772/1073398)) and then create trees out of the MSAs with [IQTree](http://www.iqtree.org/) ([Bui Quang Minh *et al*](https://academic.oup.com/mbe/article/37/8/2461/5859215)) <br/>
 See [MAFFT/IQTree](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/11_MAFFT_IQtree) for a more in-depth overview of what we did.
+For this step, IQTree2 V2.0.6 was used. See [IQtree Exectuables](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/IQTree)
 
 
 ## 12. Apply PhyloPyPruner Format
@@ -113,16 +114,72 @@ Different Taxonomic Group files and thresholds were used for the 2 different set
 1. Old Set: [Klebsormidiophyceae_TaxonomicGroupFile_3_Taxa_PrequalFilter.txt](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/10_OrthogroupSequenceGrabber_OSG/TaxonomicGroupFiles/Klebsormidiophyceae_TaxonomicGroupFile_3_Taxa_PrequalFilter.txt) with a 2 Threshold (2/3)
 2. New Set: [Klebsormidiophyceae_TaxonomicGroupFile_40_Taxa_AfterPPP_Tax21Set_AndCombinedSet.txt](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/10_OrthogroupSequenceGrabber_OSG/TaxonomicGroupFiles#:~:text=Klebsormidiophyceae_TaxonomicGroupFile_40_Taxa_AfterPPP_Tax21Set_AndCombinedSet.txt) with a 21 Threshold (21/40)
 
-Scripts execution are the same for both
+Scripts execution is the same for both.
 
 See [FilterPPPResult](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/14_FilterPhylopypruner) for a more in-depth overview of what we did.
 
 
-## 15. Combine OrthoGroup Sets
+## 15. Combine OrthoGroup Sequences
+After looking at the results of both sets, we concluded that the Old set was good for the out-groups but bad for the in-groups, and the new set was good for the in-groups but bad for the out-groups. We then decided to combine the Orthogroups of both sets together and restart the process from step 11. Another tool was created to just do that, which is called COGS.out (Combine OrthoGroup Sequences). It uses the OrthoFinder output from Step 9, And the Fasta Output Folder path from Step 14 for both sets. It then automatically obtains the OrthoGroup names and references that back based on the OrthoFinder output .tsv files And obtains the corresponding Fasta Blocks like OSG does. 
+
+See [CombineOrthoGroupSequences_COGS](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/15_CombineOrthoGroupSequences_COGS) for a more in-depth overview of what we did.
+
+## 16. MAFFT/IQTree 
+See step 11
+
+## 17. Filter PPP Script 2
+See Step 12
+
+## 18. PhyloPyPruner
+We did the same as step 13. We used the same parameters for the combined set as we did for the New Set: [PhyloPruner_I_Conda_Gandalf_CombinedSetTax21_New1.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/13_Phylopypruner/Scripts/13_Phylopypruner/PhyloPruner_I_Conda_Gandalf_CombinedSetTax21_New1.sh). 
+
+## 19. Filter the PhyloPyPruner Result
+We did the same as in step 14, however, we used the Taxonomic Group file: [TaxonomicGroupFiles/Klebsormidiophyceae_TaxonomicGroupFile_4_Taxa.txt](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/10_OrthogroupSequenceGrabber_OSG/TaxonomicGroupFiles/Klebsormidiophyceae_TaxonomicGroupFile_4_Taxa.txt) with a 2 Threshold (2/4)
+
+This way we filter out the OrthoGroup-sub files that are of irrelevance.
+
+Furthermore, in this step, we also added the parameters -a -h, To remove the Gene IDs and the Gaps from the alignments since we need to realign the files with a different method in step 20.
+
+## 20. PREQUAL
+This step is needed since we want to remove the non-informative sites from each alignment file. So that when we concatenate all the files in one big alignment without having a lot of "noise".
+During this step, Preqal, ginsi, IQTree, and clipkit are run. 
+See [Prequal](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/16_Prequal) for a more in-depth overview of what we did.
+
+## 21. Concatenating alignments file.
+We did this step to concatenate all the alignments. We used [Phyx](https://github.com/FePhyFoFum/phyx) ([JW Brown _et al_ 2017](https://academic.oup.com/bioinformatics/article/33/12/1886/2975328)) a tool that performs phylogenetic analysis on trees and sequences.
+
+See [ConcatenateSequences](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/17_ConcatenateSequences) for a more in-depth overview of what we did.
+
+## 22 ClipKIT
+After looking at the concatenated alignment we confirmed that there were still a lot of non-informative sites within the sequences. That is why we run ClipKIT with the option -g 0.65. <br/>
+We used 65, because any lower, we removed too many informative sites,  and higher, we had too many non-informative sites. This can be different from yours so play a bit around with the value to find the optimum for you.
+
+See [ClipKIT](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/18_Clipkit) for a more in-depth overview of what we did.
+
+## 23 ModelFinder
+To determine what the best tree model for our concatenated alignment was, we ran IQtree V1.6.12. See [IQtree Exectuables](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/IQTree)
+```
+iqtree -nt 20 -m TESTONLY -madd LG+C60 -msub nuclear -s [AlignmentFileInput]
+```
+
+According to the result (See [ModelFinder Results](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/19_IQTree/Examples/ModelFinder)) LG+C60 was the best fitting model for our alignment so this was used in step 24.
 
 
+## 24 IQTree
+After step 3, we then placed the model into the script and started IQTree with the parameters: (we use IQTree V2.0.6 for this step. See [IQtree Exectuables](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/IQTree) )
+```
+iqtree2 -nt 50 -m LG+C60 -msub nuclear -s [Alignment_File_Output_Step22] -bb 1000 -alrt 1000 -pre [Your_Choice_Of_Prefix_For_Output_File]
+```
+On the result of the step above, we then perform a posterior mean site frequency (PMSF)  as a rapid and efficient approximation to a full empirical profile mixture model for ML analysis ([H.C. Wang _et al_](https://academic.oup.com/sysbio/article/67/2/216/4076233) ).
 
+```
+iqtree2 -nt 20 -m LG+C60+F+G -msub nuclear -s [Alignment_File_Output_Step22] -bb 1000 -alrt 1000 -pre [Your_Choice_Of_Prefix_For_Output_File] -ft [Result_Step_Above]
+```
 
+_Spoiler: there was no difference between the trees :/_
+
+>[!NOTE]
+>Furthermore, we also used the LG+F+I+G model since that was the initial tree model from the old set. However, after running PMSF on that tree output, the resulting tree of the PMSF is the same as the result above. (results not shown)
 
 # Notes for future development
 I plan to develop a fully functional C++ tool pipeline in the future. This project was meant as a simple in and output project and it became so much more than that.
