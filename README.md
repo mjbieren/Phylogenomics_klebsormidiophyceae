@@ -38,7 +38,7 @@ See [TRINITY](Scripts/02_Trinity) for a more in-depth overview of what we did.
 [SuperTranscripts](https://github.com/trinityrnaseq/trinityrnaseq/wiki/SuperTranscripts) ([Davidson *et al* 2017](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1284-1)) et al. was inferred by collapsing splicing isoforms using the Trinity implementation. <br/>See [SuperTranscripts](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/03_SuperTranscript) for a more in-depth overview of what we did.
 
 ## 5. BUSCO I
-To determine the quality (completeness) of our assemblies we followed up by running [BUSCO](https://busco.ezlab.org/) ([Seppey *et al* 2019](https://link.springer.com/protocol/10.1007/978-1-4939-9173-0_14)). using the ‘eukaryota_odb10’ reference set. <br/>See [BUSCO_I](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/04_BUSCO_I) for a more in-depth overview of what we did.
+To determine the quality (completeness) of our assemblies we followed up by running [BUSCO](https://busco.ezlab.org/) ([Seppey *et al* 2019](https://link.springer.com/protocol/10.1007/978-1-4939-9173-0_14)). using the ‘eukaryota_odb10’ reference set. <br/><br/>See [BUSCO_I](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/04_BUSCO_I) for a more in-depth overview of what we did.
 
 ## 6. TransDecoder
 After getting the SuperTranscript and confirming they are above the completeness threshold (70%) we continued with obtaining the proteins with [TransDecoder](https://github.com/TransDecoder/TransDecoder/wiki) ([Haas, BJ](https://github.com/TransDecoder/TransDecoder))
@@ -49,14 +49,17 @@ After getting the SuperTranscript and confirming they are above the completeness
 See [TransDecoder](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/05_Transdecoder) for a more in-depth overview of what we did.
 
 ## 7. BUSCO II
-Another quality control is to determine if we still are above the completeness threshold (70%). This is because we used the single best option, and some of the values dropped a bit. <br/>
+Another quality control is to determine if we still are above the completeness threshold (70%). This is because we used the single best option, and some of the values dropped a bit. <br/><br/>
 See [BUSCO_II](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/06_BUSCO_II/README.md) for a more in-depth overview of what we did.
 
 ## 8. Decontamination
 ### Setting up the Decontamination
-To remove potential contaminants, we conducted sequence similarity searches against a comprehensive database that included proteins from various sources. Which were a positive set [*Klebsormidium nitens* NIES-2285](https://www.nature.com/articles/ncomms4978) and 4 potential contaminants through the RefSeq (downloaded on 17 Augustus 2020) representative bacterial genomes (11,318 genomes), fungi (2,397), all available viruses, archaea (1,833), and plastid genes (78,2087) (downloaded on 3 April 2023). We use this database to employ [MMseqs2](https://github.com/soedinglab/MMseqs2) ([Steinegger and Söding 2017](https://www.nature.com/articles/nbt.3988)) for the search, using an iterative approach with increasing sensitivities and maintaining a maximum of 10 hits (--start-sens 1 --sens-steps 3 -s 7 --alignment-mode 3 --max-seqs 10). 
-<br/>
-This will give a blast output file in the .outfmt6 format. <br/>
+To remove potential contaminants, we conducted sequence similarity searches against a comprehensive database that included proteins from various sources. Which were a positive set [*Klebsormidium nitens* NIES-2285](https://www.nature.com/articles/ncomms4978) and 4 potential contaminants through the RefSeq (downloaded on 17 Augustus 2020) representative bacterial genomes (11,318 genomes), fungi (2,397), all available viruses, archaea (1,833), and plastid genes (78,2087) (downloaded on 3 April 2023). We use this database to employ [MMseqs2](https://github.com/soedinglab/MMseqs2) ([Steinegger and Söding 2017](https://www.nature.com/articles/nbt.3988)) for the search, using an iterative approach with increasing sensitivities and maintaining a maximum of 10 hits 
+```
+--start-sens 1 --sens-steps 3 -s 7 --alignment-mode 3 --max-seqs 10). 
+```
+
+This will give a blast output file in the .outfmt6 format. <br/><br/>
 See [Decontamination](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/07_Decontamination) for a more in-depth overview of what we did.
 
 ### Get Positive Data Set (GPDS)
@@ -65,11 +68,11 @@ To obtain the actual positive set. I've created a tool that automatically obtain
 See [GPDS](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/08_GetPositiveDataSet_GPDS/README.md) for a more in-depth overview of what we did.
 
 ## 9 OrthoFinder
-For the next step, we have to run [OrthoFinder](https://github.com/davidemms/OrthoFinder) ([DM Emms & S Kelly 2019](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1832-y)) to obtain the OrtoGroups. For this we use a guide tree and all the positive samples we have, and included also our outgroups. <br/>
+For the next step, we have to run [OrthoFinder](https://github.com/davidemms/OrthoFinder) ([DM Emms & S Kelly 2019](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1832-y)) to obtain the OrtoGroups. For this we use a guide tree and all the positive samples we have, and included also our outgroups. <br/><br/>
 See [OrthoFinder](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/09_OrthoFinder) for a more in-depth overview of what we did.
 
 ## 10. OrthoGroup Sequence Grabber
-This is another tool I've created to obtain all the Fasta Blocks (fasta block = fasta header + sequence) for each OrthoGroup and create a Fasta output file. Furthermore, it can take into consideration how many taxonomic groups you want to have as a minimum for each Fasta File as a filter. <br/>
+This is another tool I've created to obtain all the Fasta Blocks (fasta block = fasta header + sequence) for each OrthoGroup and create a Fasta output file. Furthermore, it can take into consideration how many taxonomic groups you want to have as a minimum for each Fasta File as a filter. <br/><br/>
 See [OSG](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/10_OrthogroupSequenceGrabber_OSG) for a more in-depth overview of what we did.
 
 In the pipeline, you will see two different sets as an output for OSG
@@ -89,11 +92,11 @@ We basically started this set to define a good set that represents the In-Groups
 ## 11. MAFFT/IQTree
 As preparation for [PhyloPyPruner](https://pypi.org/project/phylopypruner/) to remove all the paralogs, we have to align all the sequences (Output from OSG) with [MAFFT](https://mafft.cbrc.jp/alignment/software/) ([K. Katoh and D.M. Standley 2013](https://academic.oup.com/mbe/article/30/4/772/1073398)) and then create trees out of the MSAs with [IQTree](http://www.iqtree.org/) ([Bui Quang Minh *et al* 2020](https://academic.oup.com/mbe/article/37/8/2461/5859215)) <br/>
 See [MAFFT/IQTree](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/11_MAFFT_IQtree) for a more in-depth overview of what we did.
-For this step, IQTree2 V2.0.6 was used. See [IQtree Exectuables](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/IQTree)
+For this step, IQTree2 V2.0.6 was used. <br/><br/>See [IQtree Exectuables](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/IQTree)
 
 
 ## 12. Apply PhyloPyPruner Format
-This is the 3rd tool I've created. It basically reformats the Newick tree files that IQtree gives as an output (by default) and makes it in a format that PhyloPyPruner (PPP) can use.
+This is the 3rd tool I've created. It basically reformats the Newick tree files that IQtree gives as an output (by default) and makes it in a format that PhyloPyPruner (PPP) can use.<br/><br/>
 See [APPPFilter](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/12_APPPFilter) for a more in-depth overview of what we did.
 
 
@@ -141,8 +144,8 @@ This way we filter out the OrthoGroup-sub files that are of irrelevance.
 Furthermore, in this step, we also added the parameters -a -h, To remove the Gene IDs and the Gaps from the alignments since we need to realign the files with a different method in step 20.
 
 ## 20. PREQUAL
-This step is needed since we want to remove the non-informative sites from each alignment file. So that when we concatenate all the files in one big alignment without having a lot of "noise".
-During this step, [PREQUAL](https://github.com/simonwhelan/prequal) ([Simon Whelan *et al* 2018](https://academic.oup.com/bioinformatics/article/34/22/3929/5026659)), [ginsi](https://mafft.cbrc.jp/alignment/software/) ([K. Katoh and D.M. Standley 2013](https://academic.oup.com/mbe/article/30/4/772/1073398)), [IQTree](http://www.iqtree.org/) ([Bui Quang Minh *et al* 2020](https://academic.oup.com/mbe/article/37/8/2461/5859215)), and [ClipKIT](https://github.com/JLSteenwyk/ClipKIT) ([J.L. Steenwijk *et al* 2020](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001007) are run. 
+This step is needed since we want to remove the non-informative sites from each alignment file. So that when we concatenate all the files in one big alignment without having a lot of "noise". <br/>
+During this step, [PREQUAL](https://github.com/simonwhelan/prequal) ([Simon Whelan *et al* 2018](https://academic.oup.com/bioinformatics/article/34/22/3929/5026659)), [ginsi](https://mafft.cbrc.jp/alignment/software/) ([K. Katoh and D.M. Standley 2013](https://academic.oup.com/mbe/article/30/4/772/1073398)), [IQTree](http://www.iqtree.org/) ([Bui Quang Minh *et al* 2020](https://academic.oup.com/mbe/article/37/8/2461/5859215)), and [ClipKIT](https://github.com/JLSteenwyk/ClipKIT) ([J.L. Steenwijk *et al* 2020](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001007) are run. <br/><br/>
 See [Prequal](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/16_Prequal) for a more in-depth overview of what we did.
 
 ## 21. Concatenating alignments file.
