@@ -18,24 +18,24 @@ Further Extraction was then done with the RNA from the Spectrum™ Plant Total R
 At Novogene (Cambridge, UK), the samples underwent quality checks using a Bionanalyzer (Agilent Technologies Inc., Santa Clara, CA, USA), and library preparation was performed based on polyA enrichment and using directional mRNA library preparation. The libraries were quality checked and sequenced using the NovaSeq 6000 platform (Illumina) with Novogene dual adapters: <br/>5’- AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT-3’ <br/>for read 1 and <br/>5’- GATCGGAAGAGCACACGTCTGAACTCCAGTCACGGATGACTATCTCGTATGCCGTCTTCTGCTTG-3’
 
 ## 2. FastQC
-[FastQC](https://github.com/s-andrews/FastQC) was used as a quality control, as very bad samples (Either from our in-house or downloaded from the SRA set) were then identified to be removed. Even if we removed the bad reads, some of them had such a low read count after trimming that we decided not to include them in our sample list and, therefore not included within the project. For more information on how FastQC was used within the project, go [here](Scripts/02_Trinity). For more information on FastQC please go to their site http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+[FastQC](https://github.com/s-andrews/FastQC) was used as a quality control, as very bad samples (Either from our in-house or downloaded from the SRA set) were then identified to be removed. Even if we removed the bad reads, some of them had such a low read count after trimming that we decided not to include them in our sample list and, therefore not included within the project. For more information on how FastQC was used within the project, go to [FASTQC](Scripts/02_Trinity). For more information on FastQC please go to their site http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
 ## 3. Trinity *de novo* Assembly
-After FastQC quality control, all samples were then assembled with the Trinity pipeline. <br/>First, the adapters were trimmed with [Trimmomatic](https://github.com/usadellab/Trimmomatic) with the settings 
+After FastQC quality control, all samples were then assembled with the Trinity pipeline. <br/>First, the adapters were trimmed with [Trimmomatic](https://github.com/usadellab/Trimmomatic) ([A. M Bolger _et al_2014](https://academic.oup.com/bioinformatics/article/30/15/2114/2390096) with the settings:
 ```
 -trimmomatic “novogene_adapter_sequences.fa:2:30:10:2:keepBothReads LEADING:3 TRAILING:3 MINLEN:36”
 ```
 
-Followed by running [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) with the command 
+Followed by running [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) ([Haas _et al_ 2013](https://www.nature.com/articles/nprot.2013.084) with the command 
 ```
 Trinity --seqType fq --left [LEFT_READS] --right [RIGHT_READS] --output [OUTPUT_FOLDER] --SS_lib_type RF --CPU 48 --trimmomatic --full_cleanup --max_memory 350G --quality_trimming_params  "ILLUMINACLIP:novogene_adapter_sequences.fa:2:30:10:2:keepBothReads LEADING:3 TRAILING:3 MINLEN:36"
 ```
 I highly recommend reading Trinity's [Wiki site](https://github.com/trinityrnaseq/trinityrnaseq/wiki), which explains everything pretty well.<br/>
 
-See [02_Trinity](Scripts/02_Trinity) for a more in-depth overview of what we did.
+See [TRINITY](Scripts/02_Trinity) for a more in-depth overview of what we did.
 
 ## 4. SuperTranscripts
-[SuperTranscripts](https://github.com/trinityrnaseq/trinityrnaseq/wiki/SuperTranscripts) ([Davidson](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1284-1) et al. was inferred by collapsing splicing isoforms using the Trinity implementation. <br/>See [SuperTranscripts](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/03_SuperTranscript) for a more in-depth overview of what we did.
+[SuperTranscripts](https://github.com/trinityrnaseq/trinityrnaseq/wiki/SuperTranscripts) ([Davidson](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1284-1)) et al. was inferred by collapsing splicing isoforms using the Trinity implementation. <br/>See [SuperTranscripts](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/03_SuperTranscript) for a more in-depth overview of what we did.
 
 ## 5. BUSCO I
 To determine the quality (completeness) of our assemblies we followed up by running [BUSCO](https://busco.ezlab.org/) ([Seppey *et al* 2019](https://link.springer.com/protocol/10.1007/978-1-4939-9173-0_14)). using the ‘eukaryota_odb10’ reference set. <br/>See [BUSCO_I](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/04_BUSCO_I) for a more in-depth overview of what we did.
