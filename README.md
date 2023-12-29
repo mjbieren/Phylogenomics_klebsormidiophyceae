@@ -54,7 +54,19 @@ See [BUSCO_II](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blo
 
 
 ## 8. Decontamination
-To remove potential contaminants, we conducted sequence similarity searches against a comprehensive database that included proteins from various sources. Which were a positive set [*Klebsormidium nitens* NIES-2285](https://www.nature.com/articles/ncomms4978)
+### Setting up the Decontamination
+To remove potential contaminants, we conducted sequence similarity searches against a comprehensive database that included proteins from various sources. Which were a positive set [*Klebsormidium nitens* NIES-2285](https://www.nature.com/articles/ncomms4978) and 4 potential contaminants through the RefSeq (downloaded on 17 Augustus 2020) representative bacterial genomes (11,318 genomes), fungi (2,397), all available viruses, archaea (1,833), and plastid genes (78,2087) (downloaded on 3 April 2023). We use this database to employ [MMseqs2](https://github.com/soedinglab/MMseqs2) ([Steinegger and Söding](https://www.nature.com/articles/nbt.3988)) for the search, using an iterative approach with increasing sensitivities and maintaining a maximum of 10 hits (--start-sens 1 --sens-steps 3 -s 7 --alignment-mode 3 --max-seqs 10). 
+<br/>
+This will give a blast output file in the .outfmt6 format. <br/>
+See [Decontamination](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/07_Decontamination) for a more in-depth overview of what we did.
+
+### Get Positive Data Set (GPDS)
+To obtain the actual positive set. I've created a tool that automatically obtains the hits against the positive set and writes an FASTA output file. It also does this for all the contaminants to give you the user information about the proteins that were removed. Furthermore, it gives you an overview of the percentage of contaminants.<br/>
+
+See [GPDS](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/08_GetPositiveDataSet_GPDS/README.md) for a more in-depth overview of what we did.
+
+## 9. OrthoFinder
+
 
 
 # Notes for future development
