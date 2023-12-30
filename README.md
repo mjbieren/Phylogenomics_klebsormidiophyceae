@@ -49,7 +49,7 @@ After getting the SuperTranscript and confirming they are above the completeness
 See [TransDecoder](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/05_Transdecoder) for a more in-depth overview of what we did.
 
 ## 7. BUSCO II
-Another quality control is to determine if we still are above the completeness threshold (70%). This is because we used the single best option, and some of the values dropped a bit. <br/><br/>
+Another quality control is to determine if we still are above the completeness threshold (70%). This is because we used the single best option, and some of the completeness values dropped a bit. <br/><br/>
 See [BUSCO_II](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/06_BUSCO_II/README.md) for a more in-depth overview of what we did.
 
 ## 8. Decontamination
