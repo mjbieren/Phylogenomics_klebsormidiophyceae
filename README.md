@@ -67,7 +67,7 @@ To obtain the actual positive set. I've created a tool that automatically obtain
 
 See [GPDS](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/08_GetPositiveDataSet_GPDS/README.md) for a more in-depth overview of what we did.
 
-## 9 OrthoFinder
+## 9. OrthoFinder
 For the next step, we have to run [OrthoFinder](https://github.com/davidemms/OrthoFinder) ([DM Emms and S Kelly 2019](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1832-y)) to obtain the OrtoGroups. For this we use a guide tree and all the positive samples we have, and included also our outgroups. <br/><br/>
 See [OrthoFinder](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/09_OrthoFinder) for a more in-depth overview of what we did.
 
@@ -106,9 +106,9 @@ For the different sets, we used different parameters, which can be found in the 
 1. Old Set: [PhyloPruner_I_Conda_Gandalf_Tax10.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/13_Phylopypruner/Scripts/13_Phylopypruner/PhyloPruner_I_Conda_Gandalf_Tax10.sh)
 2. New Set: [PhyloPruner_I_Conda_Gandalf_CombinedSetTax21_New1.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/13_Phylopypruner/Scripts/13_Phylopypruner/PhyloPruner_I_Conda_Gandalf_CombinedSetTax21_New1.sh)
 
-See [PhyloPyPruner](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/13_Phylopypruner) for a more in-depth overview of what we did.
+<br/>See [PhyloPyPruner](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/13_Phylopypruner) for a more in-depth overview of what we did.
 
-To get more information on PhyloPyPruner please follow the website link https://pypi.org/project/phylopypruner/
+<br/>To get more information on PhyloPyPruner please follow the website link https://pypi.org/project/phylopypruner/
 
 ## 14. Filter the PhyloPyPruner Result
 After Phylopypruner, we have to filter the result. This is due to the fact that how Phylopypruner works and basically prunes parts of the tree and creates sub-OrthoGroup files. E.g. N2_OG0000001**\_1**.fa and NN2_OG0000001**\_2**.fa. These files can have a low and high amount of species, but can underrepresent the taxonomic groups. Hence, we have to filter it again, to remove the ones that are below the Taxonomic Group threshold.
