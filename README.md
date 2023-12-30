@@ -146,7 +146,7 @@ Furthermore, in this step, we also added the parameters -a -h, To remove the Gen
 
 ## 20. PREQUAL
 This step is needed since we want to remove the non-informative sites from each alignment file. So that when we concatenate all the files in one big alignment without having a lot of "noise". <br/>
-During this step multiple programs are run:
+During this step, multiple programs were run:
 1. [PREQUAL](https://github.com/simonwhelan/prequal) ([Simon Whelan *et al* 2018](https://academic.oup.com/bioinformatics/article/34/22/3929/5026659))
 2. [ginsi](https://mafft.cbrc.jp/alignment/software/) ([K. Katoh and D.M. Standley 2013](https://academic.oup.com/mbe/article/30/4/772/1073398))
 3. [IQTree](http://www.iqtree.org/) ([Bui Quang Minh *et al* 2020](https://academic.oup.com/mbe/article/37/8/2461/5859215))
