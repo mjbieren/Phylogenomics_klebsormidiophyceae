@@ -11,7 +11,7 @@ Above, I've portrayed the pipeline in which the Klebsormidiophyceae Phylogenomic
 
 ## 1. RNA Seq Data
 This was either obtained from the SRA database (see preprint under citing below). Or obtained in-house.
-All in-house strains were cultivated in 3NBBM (medium [26a](https://doi.org/10.1111/j.1438-8677.1997.tb00659.x)) at 18°C under full-spectrum fluorescent lamps (25-35 µmol photons m−2 s−1; 14:10h light-dark cycle).
+All in-house strains were cultivated in 3NBBM (medium [26a](https://doi.org/10.1111/j.1438-8677.1997.tb00659.x)) at 18°C under full-spectrum fluorescent lamps (25-35 µmol photons m^−2 s^−1; 14:10h light-dark cycle).
 After 21 days, 50ml of the culture was centrifuged for 5 min at 20°C at 11000 rpm. The supernatant was removed, and the pellet was transferred into the Tenbroek tissue homogenizer and manually disrupted for 10 min on ice.
 Further Extraction was then done with the RNA from the Spectrum™ Plant Total RNA Kit (Sigma-Aldrich Chemie GmbH, Germany) according to the manufacturer’s instructions. DNAse I treatment (Thermo Fisher, Waltham, MA, USA) was applied to the RNA samples, and their quality and quantity were assessed using a 1% agarose gel with an SDS stain, and nanodrop (Thermo Fisher), respectively. The RNA samples were shipped on dry ice to Novogene (Cambridge, UK).
 
