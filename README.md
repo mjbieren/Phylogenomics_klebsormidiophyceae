@@ -188,7 +188,7 @@ iqtree2 -nt 20 -m LG+C60+F+G -msub nuclear -s [Alignment_File_Output_Step22] -bb
 
 # Ancestor Character State Reconstruction
 After the pipeline, we use the tree to do some Ancestor Character State Reconstruction with the R package [phytools](https://github.com/liamrevell/phytools) ([L.J. Revell 2012](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2011.00169.x) based on different states (morphology, habitat, occurrence) per species.<br/><br/>
-See [ACSR](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/ACSR) for more information on how we dit this.
+See [ACSR](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/ACSR) for more information on how we did this.
 
 
 # Notes for future development
