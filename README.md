@@ -1,6 +1,6 @@
 # Phylogenomics klebsormidiophyceae
-This is an overview of all novel tools and scripts used in the Klebsormidiophyceae Phylogenomics Project.
-This GitHub does not contain the raw data we used and obtained (with some small exceptions) during our Klebsormidiophyceae Phylogenomic Project. For that, we would like to reference you to our Zenodo Link: https://zenodo.org/records/10058795
+This is an overview of all (novel) tools and scripts we used in the Klebsormidiophyceae Phylogenomics Project.
+This GitHub does not contain the raw data we used and obtained (with some small exceptions) during our Klebsormidiophyceae Phylogenomic Project. For that, we would like to refer you to our Zenodo Link: https://zenodo.org/records/10058795
 
 
 # Workflow
