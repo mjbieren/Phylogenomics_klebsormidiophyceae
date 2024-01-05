@@ -112,8 +112,7 @@ For the different sets, we used different parameters, which can be found in the 
 <br/>To get more information on PhyloPyPruner please follow the website link https://pypi.org/project/phylopypruner/
 
 ## 14. Filter the PhyloPyPruner Result
-After Phylopypruner, we have to filter the result. This is due to the fact that how Phylopypruner works and basically prunes parts of the tree and creates sub-OrthoGroup files. E.g. N2_OG0000001**\_1**.fa and NN2_OG0000001**\_2**.fa. These files can have a low and high amount of species, but can underrepresent the taxonomic groups. Hence, we have to filter it again, to remove the ones that are below the Taxonomic Group threshold.
-We've used a different For this we've created a tool called FilterPPPResult.out. Like OSG it takes a Taxonomic group file and filters the Files out that do not meet the Threshold. Furthermore, it can remove the Gene IDs (keep only the strain name) and remove the alignments from the sequences, which is needed for the PREQUAL step (later in the Pipeline).
+After Phylopypruner, we have to filter the result. This is due to the fact that how Phylopypruner works and basically prunes parts of the tree and creates sub-OrthoGroup files. E.g. N2_OG0000001**\_1**.fa and NN2_OG0000001**\_2**.fa. These files can have a low and high amount of species, but can underrepresent the taxonomic groups. Hence, we have to filter it again, to remove the ones that are below the Taxonomic Group threshold. For this we've created a tool called FilterPPPResult.out. Like OSG it takes a Taxonomic group file and filters the Files out that do not meet the Threshold. Furthermore, it can remove the Gene IDs (keep only the strain name) and remove the alignments from the sequences, which is needed for the PREQUAL step (later in the Pipeline).
 Different Taxonomic Group files and thresholds were used for the 2 different sets.
 1. Old Set: [Klebsormidiophyceae_TaxonomicGroupFile_3_Taxa_PrequalFilter.txt](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/10_OrthogroupSequenceGrabber_OSG/TaxonomicGroupFiles/Klebsormidiophyceae_TaxonomicGroupFile_3_Taxa_PrequalFilter.txt) with a 2 Threshold (2/3)
 2. New Set: [Klebsormidiophyceae_TaxonomicGroupFile_40_Taxa_AfterPPP_Tax21Set_AndCombinedSet.txt](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/10_OrthogroupSequenceGrabber_OSG/TaxonomicGroupFiles#:~:text=Klebsormidiophyceae_TaxonomicGroupFile_40_Taxa_AfterPPP_Tax21Set_AndCombinedSet.txt) with a 21 Threshold (21/40)
@@ -123,10 +122,10 @@ Scripts execution is the same for both.
 See [FilterPPPResult](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/14_FilterPhylopypruner) for a more in-depth overview of what we did.
 
 
-## 15. Combine OrthoGroup Sequences
-After looking at the results of both sets, we concluded that the Old set was good for the out-groups but bad for the in-groups, and the new set was good for the in-groups but bad for the out-groups. We then decided to combine the Orthogroups of both sets together and restart the process from step 11. Another tool was created to just do that, which is called COGS.out (Combine OrthoGroup Sequences). It uses the OrthoFinder output from Step 9, And the Fasta Output Folder path from Step 14 for both sets. It then automatically obtains the OrthoGroup names and references that back based on the OrthoFinder output .tsv files And obtains the corresponding Fasta Blocks like OSG does. 
+## 15. Combine OrthoGroup Sets
+After looking at the results of both sets, we concluded that the Old set was good for the out-groups but bad for the in-groups, and the new set was good for the in-groups but bad for the out-groups. We then decided to combine the Orthogroups of both sets together and restart the process from step 11. Another tool was created to just do that, which is called COGS.out (Combine OrthoGroup Sets). It uses the OrthoFinder output from Step 9, And the Fasta Output Folder path from Step 14 for both sets. It then automatically obtains the OrthoGroup names and references that back based on the OrthoFinder output .tsv files And obtains the corresponding Fasta Blocks like OSG does. 
 
-See [CombineOrthoGroupSequences_COGS](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/15_CombineOrthoGroupSequences_COGS) for a more in-depth overview of what we did.
+See [CombineOrthoGroupSets_COGS](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/15_CombineOrthoGroupSets_COGS) for a more in-depth overview of what we did.
 
 ## 16. MAFFT/IQTree 
 See step 11
