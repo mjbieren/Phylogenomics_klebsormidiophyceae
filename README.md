@@ -194,7 +194,7 @@ See [ACSR](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/ma
 # Notes for future development
 I plan to develop a fully functional C++ tool pipeline in the future. This project was meant as a simple in and output project and it became so much more than that.
 The goal is to enter only the RNA-seq data (and related information) and a guide tree and let the program handle the rest so that people who are not skilled in bioinformatics can run it themselves.
-Either with the help of a High Performance Cluster, or a single High Performachine machine.
+Either with the help of a High-Performance Cluster or a single High-Performance machine.
 
 
 # Citing
