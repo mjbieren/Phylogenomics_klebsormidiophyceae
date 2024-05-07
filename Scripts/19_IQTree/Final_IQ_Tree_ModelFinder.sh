@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IQ_TREEPATH= #iqtree2 see executables
+IQ_TREEPATH= #iqtree1 see executables
 THREADS=20
 FILE_INPUT= #Alignment file output form step 18
 MSUB=nuclear #What type of AA models, can be nuclear, mitochondrial, chloroplast or viral.
