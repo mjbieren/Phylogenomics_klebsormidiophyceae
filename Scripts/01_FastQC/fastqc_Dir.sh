@@ -1,19 +1,18 @@
 #!/bin/bash
 
 #SBATCH -p medium
-#SBATCH -t 02:00:00
+#SBATCH -t 48:00:00
 #SBATCH -o %J_FastQC.out
 #SBATCH -C scratch
 #SBATCH -c 1
-#SBATCH --mem 10G
+#SBATCH --mem 30G
 
 module purge
 module load fastqc
 
 CURRENTDIR=`pwd`
 DIR=${CURRENTDIR}/Raw_Sample_Data/ #Change this
-OUT=${CURRENTDIR}/FASTQC_Result/ #Change this
-
+OUT=${CURRENTDIR}/FASTQC_Result/
 
 mkdir -p "$OUT" || exit -1
 DIRECTORIES=`dir ${DIR}`
