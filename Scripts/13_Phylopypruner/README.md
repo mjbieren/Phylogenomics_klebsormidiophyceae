@@ -9,6 +9,6 @@ Throughout the phylogenomic klebsormidiophyceae project we used different settin
 I run phylopypruner within a conda environment and a tmux session.
 
 ## Phylopypruner
-PhyloPyPruner is a Python package for phylogenetic tree-based orthology inference, using the species overlap method and is developed by Dr. Felix Thalén.
+PhyloPyPruner is a Python package for phylogenetic tree-based orthology inference, using the species overlap method and is developed by Dr. Felicia Sandberg.
 
-To install and use Phylopypruner please follow the link https://github.com/fethalen/phylopypruner
+To install and use Phylopypruner please follow the link [https://github.com/fethalen/phylopypruner](https://github.com/fethalen/phylopypruner)
